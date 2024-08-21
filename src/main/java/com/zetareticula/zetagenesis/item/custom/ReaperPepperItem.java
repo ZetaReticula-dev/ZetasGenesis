@@ -1,8 +1,6 @@
 package com.zetareticula.zetagenesis.item.custom;
 
-import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -11,19 +9,16 @@ import net.minecraft.item.ItemUsage;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
-import java.util.UUID;
-
-public class HeartAddingItem extends Item {
+public class ReaperPepperItem extends Item {
     private static final double MAX_EXTRA_HEALTH = 10.0; // 5 hearts = 10 health points
     private static final double EXPLOSION_THRESHOLD = 20.0 + MAX_EXTRA_HEALTH; // The total health points (20 base + 10 extra)
 
-    public HeartAddingItem(Settings settings) {
+    public ReaperPepperItem(Settings settings) {
         super(settings); // Define food properties
     }
 

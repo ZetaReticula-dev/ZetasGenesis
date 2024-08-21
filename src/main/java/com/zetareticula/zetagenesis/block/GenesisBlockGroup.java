@@ -31,6 +31,8 @@ public class GenesisBlockGroup {
                         entries.add(GenesisBlocks.CALCITE_STAIRS);
                         entries.add(GenesisBlocks.CALCITE_SLAB);
                         entries.add(GenesisBlocks.RAINBOW_BLOCK);
+                        entries.add(GenesisBlocks.GRIMSTONE);
+                        entries.add(GenesisBlocks.COBBLED_GRIMSTONE);
 
                     })
 

@@ -1,4 +1,12 @@
 {
+  "item.zetasgenesis.enderite_helmet": "Enderite Helmet",
+  "item.zetasgenesis.enderite_chestplate": "Enderite Chestplate",
+  "item.zetasgenesis.enderite_leggings": "Enderite Leggings",
+  "item.zetasgenesis.enderite_boots": "Enderite Boots",
+  "item.zetasgenesis.divan_helmet": "Helmet of Divan",
+  "item.zetasgenesis.divan_chestplate": "Chestplate of Divan",
+  "item.zetasgenesis.divan_leggings": "Leggings of Divan",
+  "item.zetasgenesis.divan_boots": "Boots of Divan",
   "item.zetasgenesis.legendary_hero": "Legendary Hero",
   "item.zetasgenesis.reaper_pepper": "Reaper Pepper",
   "item.zetasgenesis.aspect_of_the_void": "Aspect of The Void Template",

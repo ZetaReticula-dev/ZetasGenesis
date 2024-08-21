@@ -10,7 +10,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
-import static net.minecraft.block.Blocks.CALCITE;
+import static net.minecraft.block.Blocks.*;
 
 
 public class GenesisBlocks {
@@ -66,6 +66,15 @@ public class GenesisBlocks {
 
     public static final Block POLISHED_CALCITE_SLAB = registerBlock("polished_calcite_slab",
             new SlabBlock(AbstractBlock.Settings.copy(POLISHED_CALCITE)));
+
+    public static final Block GRIMSTONE = registerBlock("grimstone",
+            new Block(AbstractBlock.Settings.copy(DEEPSLATE)));
+
+    public static final Block COBBLED_GRIMSTONE = registerBlock("cobbled_grimstone",
+            new Block(AbstractBlock.Settings.copy(COBBLED_DEEPSLATE)));
+
+    public static final Block POLISHED_GRIMSTONE = registerBlock("polished_grimstone",
+            new Block(AbstractBlock.Settings.copy(POLISHED_DEEPSLATE)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

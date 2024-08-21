@@ -22,6 +22,14 @@ public class GenesisItemGroup {
                         entries.add(GenesisItems.ANGEL_RING);
                         entries.add(GenesisItems.LEGENDARY_HERO);
                         entries.add(GenesisItems.REAPER_PEPPER);
+                        entries.add(GenesisItems.DIVAN_HELMET);
+                        entries.add(GenesisItems.DIVAN_CHESTPLATE);
+                        entries.add(GenesisItems.DIVAN_LEGGINGS);
+                        entries.add(GenesisItems.DIVAN_BOOTS);
+                        entries.add(GenesisItems.ENDERITE_HELMET);
+                        entries.add(GenesisItems.ENDERITE_CHESTPLATE);
+                        entries.add(GenesisItems.ENDERITE_LEGGINGS);
+                        entries.add(GenesisItems.ENDERITE_BOOTS);
 
                     })
 

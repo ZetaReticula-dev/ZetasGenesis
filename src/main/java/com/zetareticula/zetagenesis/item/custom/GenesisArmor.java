@@ -19,51 +19,59 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 public class GenesisArmor {
-    public static final RegistryEntry<ArmorMaterial> WITHER = register("wither", Util.make(new EnumMap(ArmorItem.Type.class), map -> {
-        map.put(ArmorItem.Type.BOOTS, 3);
-        map.put(ArmorItem.Type.LEGGINGS, 6);
-        map.put(ArmorItem.Type.CHESTPLATE, 8);
-        map.put(ArmorItem.Type.HELMET, 3);
-        map.put(ArmorItem.Type.BODY, 11);
-    }), 9, SoundEvents.ENTITY_BREEZE_WIND_BURST, 3.0F, 0.1F, () -> Ingredient.ofItems(GenesisItems.AOTV));
+    public static final RegistryEntry<ArmorMaterial> DIVAN = registerMaterial("divan",
+            // Defense (protection) point values for each armor piece.
+            Map.of(
+                    ArmorItem.Type.HELMET, 3,
+                    ArmorItem.Type.CHESTPLATE, 8,
+                    ArmorItem.Type.LEGGINGS, 6,
+                    ArmorItem.Type.BOOTS, 3
+            ),
+            // Enchantability. For reference, leather has 15, iron has 9, and diamond has 10.
+            25,
+            // The sound played when the armor is equipped.
+            SoundEvents.ITEM_ARMOR_EQUIP_GOLD,
+            // The ingredient(s) used to repair the armor.
+            () -> Ingredient.ofItems(GenesisItems.REAPER_PEPPER),
+            3.0F,
+            0.1F,
+            // Guidite is NOT dyeable, so we will pass false.
+            false);
 
-    private static RegistryEntry<ArmorMaterial> register(
-            String id,
-            EnumMap<ArmorItem.Type, Integer> defense,
-            int enchantability,
-            RegistryEntry<SoundEvent> equipSound,
-            float toughness,
-            float knockbackResistance,
-            Supplier<Ingredient> repairIngredient
-    ) {
-        List<ArmorMaterial.Layer> list = List.of(new ArmorMaterial.Layer(Identifier.tryParse(ZetaGenesis.MOD_ID + ":" + id)));
-        return register(id, defense, enchantability, equipSound, toughness, knockbackResistance, repairIngredient, list);
-    }
+    public static final RegistryEntry<ArmorMaterial> ENDERITE = registerMaterial("enderite",
+            // Defense (protection) point values for each armor piece.
+            Map.of(
+                    ArmorItem.Type.HELMET, 4,
+                    ArmorItem.Type.CHESTPLATE, 9,
+                    ArmorItem.Type.LEGGINGS, 7,
+                    ArmorItem.Type.BOOTS, 4
+            ),
+            // Enchantability. For reference, leather has 15, iron has 9, and diamond has 10.
+            25,
+            // The sound played when the armor is equipped.
+            SoundEvents.ITEM_ARMOR_EQUIP_TURTLE,
+            // The ingredient(s) used to repair the armor.
+            () -> Ingredient.ofItems(GenesisItems.REAPER_PEPPER),
+            4.0F,
+            0.1F,
+            // Guidite is NOT dyeable, so we will pass false.
+            false);
 
-    private static RegistryEntry<ArmorMaterial> register(
-            String id,
-            EnumMap<ArmorItem.Type, Integer> defense,
-            int enchantability,
-            RegistryEntry<SoundEvent> equipSound,
-            float toughness,
-            float knockbackResistance,
-            Supplier<Ingredient> repairIngredient,
-            List<ArmorMaterial.Layer> layers
-    ) {
-        EnumMap<ArmorItem.Type, Integer> enumMap = new EnumMap(ArmorItem.Type.class);
+    public static RegistryEntry<ArmorMaterial> registerMaterial(String id, Map<ArmorItem.Type, Integer> defensePoints, int enchantability, RegistryEntry<SoundEvent> equipSound, Supplier<Ingredient> repairIngredientSupplier, float toughness, float knockbackResistance, boolean dyeable) {
+        // Get the supported layers for the armor material
+        List<ArmorMaterial.Layer> layers = List.of(
 
-        for (ArmorItem.Type type : ArmorItem.Type.values()) {
-            enumMap.put(type, (Integer)defense.get(type));
-        }
-
-        return Registry.registerReference(
-                Registries.ARMOR_MATERIAL,
-                Identifier.tryParse(ZetaGenesis.MOD_ID + ":" + id),
-                new ArmorMaterial(enumMap, enchantability, equipSound, repairIngredient, layers, toughness, knockbackResistance)
-
-
+                new ArmorMaterial.Layer(Identifier.of(ZetaGenesis.MOD_ID, id), "", dyeable)
         );
+
+        ArmorMaterial material = new ArmorMaterial(defensePoints, enchantability, equipSound, repairIngredientSupplier, layers, toughness, knockbackResistance);
+        // Register the material within the ArmorMaterials registry.
+        material = Registry.register(Registries.ARMOR_MATERIAL, Identifier.of(ZetaGenesis.MOD_ID, id), material);
+
+        // The majority of the time, you'll want the RegistryEntry of the material - especially for the ArmorItem constructor.
+        return RegistryEntry.of(material);
     }
     public static void registerGenesisArmor() {
         ZetaGenesis.LOGGER.info("Registering Genesis Armor for " + ZetaGenesis.MOD_ID);
-}}
+    }
+}
