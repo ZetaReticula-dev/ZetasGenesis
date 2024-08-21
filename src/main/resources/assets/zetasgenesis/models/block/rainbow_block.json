@@ -1,0 +1,13 @@
+{
+
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "zetasgenesis:block/rainbow_block",
+    "east": "zetasgenesis:block/rainbow_block_side",
+    "north": "zetasgenesis:block/rainbow_block_top",
+    "particle": "zetasgenesis:block/rainbow_block",
+    "south": "zetasgenesis:block/rainbow_block_top",
+    "up": "zetasgenesis:block/rainbow_block",
+    "west": "zetasgenesis:block/rainbow_block_side"
+  }
+}

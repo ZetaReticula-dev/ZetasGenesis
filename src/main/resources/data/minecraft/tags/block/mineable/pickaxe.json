@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "zetasgenesis:calcite_bricks",
+    "zetasgenesis:calcite_tiles",
+    "zetasgenesis:chiseled_calcite_bricks",
+    "zetasgenesis:cracked_calcite_bricks",
+    "zetasgenesis:cracked_calcite_tiles",
+    "zetasgenesis:polished_calcite",
+    "zetasgenesis:calcite_stairs",
+    "zetasgenesis:calcite_tiles_stairs",
+    "zetasgenesis:calcite_brick_stairs",
+    "zetasgenesis:polished_calcite_stairs",
+    "zetasgenesis:calcite_slab",
+    "zetasgenesis:calcite_brick_slab",
+    "zetasgenesis:calcite_tile_slab",
+    "zetasgenesis:polished_calcite_slab"
+  ]
+}
