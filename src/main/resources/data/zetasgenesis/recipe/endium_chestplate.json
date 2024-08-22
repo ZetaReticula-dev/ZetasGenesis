@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:smithing_transform",
+    "template": {
+        "item": "zetasgenesis:endium_upgrade_smithing_template"
+    },
+    "base": {
+        "item": "minecraft:netherite_chestplate"
+    },
+    "addition": {
+        "item": "zetasgenesis:endium_ingot"
+    },
+    "result": {
+        "id": "zetasgenesis:endium_chestplate"
+    }
+}
