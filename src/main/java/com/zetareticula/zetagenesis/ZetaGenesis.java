@@ -9,6 +9,7 @@ import com.zetareticula.zetagenesis.item.GenesisItems;
 import com.zetareticula.zetagenesis.item.custom.GenesisArmor;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,5 +30,6 @@ public class ZetaGenesis implements ModInitializer {
 		GenesisBlockGroup.registerGenesisBlockGroup();
 		GenesisItemGroup.registerGenesisItemGroup();
 		PlayerDeathEvent.registerPlayerDeathEvent();
+		FuelRegistry.INSTANCE.add(GenesisItems.URANIUM_FUEL_ROD, 240000);
 	}}
 

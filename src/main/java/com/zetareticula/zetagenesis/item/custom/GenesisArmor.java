@@ -38,7 +38,7 @@ public class GenesisArmor {
             // Guidite is NOT dyeable, so we will pass false.
             false);
 
-    public static final RegistryEntry<ArmorMaterial> ENDERITE = registerMaterial("enderite",
+    public static final RegistryEntry<ArmorMaterial> ENDIUM = registerMaterial("endium",
             // Defense (protection) point values for each armor piece.
             Map.of(
                     ArmorItem.Type.HELMET, 4,
@@ -49,9 +49,9 @@ public class GenesisArmor {
             // Enchantability. For reference, leather has 15, iron has 9, and diamond has 10.
             25,
             // The sound played when the armor is equipped.
-            SoundEvents.ITEM_ARMOR_EQUIP_TURTLE,
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
             // The ingredient(s) used to repair the armor.
-            () -> Ingredient.ofItems(GenesisItems.REAPER_PEPPER),
+            () -> Ingredient.ofItems(GenesisItems.ENDIUM_INGOT),
             4.0F,
             0.1F,
             // Guidite is NOT dyeable, so we will pass false.

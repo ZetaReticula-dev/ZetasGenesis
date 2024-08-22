@@ -10,6 +10,12 @@ import net.minecraft.util.Rarity;
 
 public class GenesisItems {
 
+    public static final Item URANIUM_FUEL_ROD = registerItem("uranium_fuel_rod",
+            new Item(new Item.Settings()));
+
+    public static final Item TUNING_FORK = registerItem("tuning_fork",
+            new TuningForkItem(new Item.Settings().maxCount(1)));
+
     public static final Item LEGENDARY_HERO = registerItem("legendary_hero",
             new Item(new Item.Settings().food(GenesisFood.LEGENDARY_HERO)));
 
@@ -39,17 +45,27 @@ public class GenesisItems {
     public static final Item DIVAN_BOOTS = registerItem("divan_boots",
             new ArmorItem(GenesisArmor.DIVAN, ArmorItem.Type.BOOTS, new Item.Settings().fireproof()));
 
-    public static final Item ENDERITE_HELMET = registerItem("enderite_helmet",
-            new ArmorItem(GenesisArmor.ENDERITE, ArmorItem.Type.HELMET, new Item.Settings().rarity(Rarity.RARE).fireproof()));
+    public static final Item ENDIUM_HELMET = registerItem("endium_helmet",
+            new ArmorItem(GenesisArmor.ENDIUM, ArmorItem.Type.HELMET, new Item.Settings().rarity(Rarity.RARE).fireproof().maxDamage
+                    (ArmorItem.Type.HELMET.getMaxDamage(45))));
 
-    public static final Item ENDERITE_CHESTPLATE = registerItem("enderite_chestplate",
-            new ArmorItem(GenesisArmor.ENDERITE, ArmorItem.Type.CHESTPLATE, new Item.Settings().rarity(Rarity.RARE).fireproof()));
+    public static final Item ENDIUM_CHESTPLATE = registerItem("endium_chestplate",
+            new ArmorItem(GenesisArmor.ENDIUM, ArmorItem.Type.CHESTPLATE, new Item.Settings().rarity(Rarity.RARE).fireproof().maxDamage
+                    (ArmorItem.Type.CHESTPLATE.getMaxDamage(45))));
 
-    public static final Item ENDERITE_LEGGINGS = registerItem("enderite_leggings",
-            new ArmorItem(GenesisArmor.ENDERITE, ArmorItem.Type.LEGGINGS, new Item.Settings().rarity(Rarity.RARE).fireproof()));
+    public static final Item ENDIUM_LEGGINGS = registerItem("endium_leggings",
+            new ArmorItem(GenesisArmor.ENDIUM, ArmorItem.Type.LEGGINGS, new Item.Settings().rarity(Rarity.RARE).fireproof().maxDamage
+                    (ArmorItem.Type.LEGGINGS.getMaxDamage(45))));
 
-    public static final Item ENDERITE_BOOTS = registerItem("enderite_boots",
-            new ArmorItem(GenesisArmor.ENDERITE, ArmorItem.Type.BOOTS, new Item.Settings().rarity(Rarity.RARE).fireproof()));
+    public static final Item ENDIUM_BOOTS = registerItem("endium_boots",
+            new ArmorItem(GenesisArmor.ENDIUM, ArmorItem.Type.BOOTS, new Item.Settings().rarity(Rarity.RARE).fireproof().maxDamage
+                    (ArmorItem.Type.BOOTS.getMaxDamage(45))));
+
+    public static final Item ENDIUM_INGOT = registerItem("endium_ingot",
+            new Item(new Item.Settings().rarity(Rarity.RARE).fireproof()));
+
+    public static final Item ENDIUM_UPGRADE = registerItem("endium_upgrade_smithing_template",
+            new Item(new Item.Settings().rarity(Rarity.EPIC).fireproof()));
 
     public static final Item ANGEL_RING = registerItem("angel_ring",
             new AngelRing(new Item.Settings().maxCount(1)));

@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier;
 public class GenesisBlockGroup {
     public static final ItemGroup GENESIS_BLOCKS = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(ZetaGenesis.MOD_ID, "genesis_blocks"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(GenesisBlocks.CALCITE_TILES))
+            FabricItemGroup.builder().icon(() -> new ItemStack(GenesisBlocks.CALCITE_BRICKS))
                     .displayName(Text.translatable("itemgroup.zetasgenesis.genesis_blocks"))
                     .entries((displayContext, entries) -> {
                         entries.add(GenesisBlocks.CALCITE_BRICKS);
