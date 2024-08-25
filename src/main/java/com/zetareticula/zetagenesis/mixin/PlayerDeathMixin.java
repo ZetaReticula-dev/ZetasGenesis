@@ -1,6 +1,6 @@
 package com.zetareticula.zetagenesis.mixin;
 
-import com.zetareticula.zetagenesis.component.PlayerDeathEvent;
+import com.zetareticula.zetagenesis.utils.PlayerDeathEvent;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import org.spongepowered.asm.mixin.Mixin;

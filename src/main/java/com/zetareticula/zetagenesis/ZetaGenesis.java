@@ -3,10 +3,13 @@ package com.zetareticula.zetagenesis;
 import com.zetareticula.zetagenesis.block.GenesisBlockGroup;
 import com.zetareticula.zetagenesis.block.GenesisBlocks;
 import com.zetareticula.zetagenesis.component.GenesisComponents;
-import com.zetareticula.zetagenesis.component.PlayerDeathEvent;
+import com.zetareticula.zetagenesis.equipment.GenesisToolMaterials;
+import com.zetareticula.zetagenesis.food.GenesisFoodGroup;
+import com.zetareticula.zetagenesis.sounds.GenesisSounds;
+import com.zetareticula.zetagenesis.utils.PlayerDeathEvent;
 import com.zetareticula.zetagenesis.item.GenesisItemGroup;
 import com.zetareticula.zetagenesis.item.GenesisItems;
-import com.zetareticula.zetagenesis.item.custom.GenesisArmor;
+import com.zetareticula.zetagenesis.equipment.GenesisArmor;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -29,6 +32,9 @@ public class ZetaGenesis implements ModInitializer {
 		GenesisComponents.registerGensisComponents();
 		GenesisBlockGroup.registerGenesisBlockGroup();
 		GenesisItemGroup.registerGenesisItemGroup();
+		GenesisToolMaterials.registerGenesisToolMaterials();
+		GenesisSounds.registerGenesisSounds();
+		GenesisFoodGroup.registerGenesisFoodGroup();
 		PlayerDeathEvent.registerPlayerDeathEvent();
 		FuelRegistry.INSTANCE.add(GenesisItems.URANIUM_FUEL_ROD, 240000);
 	}}

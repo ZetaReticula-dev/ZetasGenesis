@@ -17,22 +17,19 @@ public class GenesisItemGroup {
                     .displayName(Text.translatable("itemgroup.zetasgenesis.genesis_items"))
                     .entries((displayContext, entries) -> {
                         entries.add(GenesisItems.AOTV);
-                        entries.add(GenesisItems.AOTV1);
-                        entries.add(GenesisItems.AOTV2);
                         entries.add(GenesisItems.TUNING_FORK);
                         entries.add(GenesisItems.ANGEL_RING);
-                        entries.add(GenesisItems.LEGENDARY_HERO);
-                        entries.add(GenesisItems.REAPER_PEPPER);
                         entries.add(GenesisItems.DIVAN_HELMET);
                         entries.add(GenesisItems.DIVAN_CHESTPLATE);
                         entries.add(GenesisItems.DIVAN_LEGGINGS);
                         entries.add(GenesisItems.DIVAN_BOOTS);
-                        entries.add(GenesisItems.ENDIUM_HELMET);
-                        entries.add(GenesisItems.ENDIUM_CHESTPLATE);
-                        entries.add(GenesisItems.ENDIUM_LEGGINGS);
-                        entries.add(GenesisItems.ENDIUM_BOOTS);
-                        entries.add(GenesisItems.ENDIUM_INGOT);
-                        entries.add(GenesisItems.ENDIUM_UPGRADE);
+                        entries.add(GenesisItems.ENDERIUM_HELMET);
+                        entries.add(GenesisItems.ENDERIUM_CHESTPLATE);
+                        entries.add(GenesisItems.ENDERIUM_LEGGINGS);
+                        entries.add(GenesisItems.ENDERIUM_BOOTS);
+                        entries.add(GenesisItems.ENDERIUM_SWORD);
+                        entries.add(GenesisItems.ENDERIUM_INGOT);
+                        entries.add(GenesisItems.ENDERIUM_UPGRADE);
                         entries.add(GenesisItems.URANIUM_FUEL_ROD);
 
                     })

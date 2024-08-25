@@ -1,4 +1,4 @@
-package com.zetareticula.zetagenesis.item.custom;
+package com.zetareticula.zetagenesis.equipment;
 
 import com.zetareticula.zetagenesis.ZetaGenesis;
 import com.zetareticula.zetagenesis.item.GenesisItems;
@@ -11,9 +11,7 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Util;
 
-import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
@@ -38,7 +36,26 @@ public class GenesisArmor {
             // Guidite is NOT dyeable, so we will pass false.
             false);
 
-    public static final RegistryEntry<ArmorMaterial> ENDIUM = registerMaterial("endium",
+    public static final RegistryEntry<ArmorMaterial> PLATINUM = registerMaterial("platinum",
+            // Defense (protection) point values for each armor piece.
+            Map.of(
+                    ArmorItem.Type.HELMET, 4,
+                    ArmorItem.Type.CHESTPLATE, 9,
+                    ArmorItem.Type.LEGGINGS, 7,
+                    ArmorItem.Type.BOOTS, 4
+            ),
+            // Enchantability. For reference, leather has 15, iron has 9, and diamond has 10.
+            10 ,
+            // The sound played when the armor is equipped.
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
+            // The ingredient(s) used to repair the armor.
+            () -> Ingredient.ofItems(GenesisItems.ENDERIUM_INGOT),
+            4.0F,
+            0.1F,
+            // Guidite is NOT dyeable, so we will pass false.
+            false);
+
+    public static final RegistryEntry<ArmorMaterial> ENDERIUM = registerMaterial("enderium",
             // Defense (protection) point values for each armor piece.
             Map.of(
                     ArmorItem.Type.HELMET, 4,
@@ -51,7 +68,7 @@ public class GenesisArmor {
             // The sound played when the armor is equipped.
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
             // The ingredient(s) used to repair the armor.
-            () -> Ingredient.ofItems(GenesisItems.ENDIUM_INGOT),
+            () -> Ingredient.ofItems(GenesisItems.ENDERIUM_INGOT),
             4.0F,
             0.1F,
             // Guidite is NOT dyeable, so we will pass false.

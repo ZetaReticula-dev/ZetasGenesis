@@ -51,8 +51,3 @@ public class AngelRing extends Item {
         }
         return TypedActionResult.success(user.getStackInHand(hand)); }
 }
-
-
-
-
-
