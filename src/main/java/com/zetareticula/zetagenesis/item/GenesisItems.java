@@ -20,7 +20,7 @@ public class GenesisItems {
             new Item(new Item.Settings()));
 
     public static final Item TUNING_FORK = registerItem("tuning_fork",
-            new TuningForkItem(new Item.Settings().maxCount(1)));
+            new TuningForkItem(new Item.Settings().maxDamage(16).maxCount(1)));
 
     public static final Item LEGENDARY_HERO = registerItem("legendary_hero",
             new Item(new Item.Settings().food(GenesisFood.LEGENDARY_HERO)));
@@ -29,7 +29,7 @@ public class GenesisItems {
             new ReaperPepperItem(new Item.Settings().food(GenesisFood.REAPER_PEPPER)));
 
     public static final Item AOTV = registerItem("aspect_of_the_void",
-            new TeleportItem(new Item.Settings().rarity(Rarity.UNCOMMON).maxCount(1)));
+            new TeleportItem(new Item.Settings().maxDamage(256).maxCount(1), 1));
 
     public static final Item DIVAN_HELMET = registerItem("divan_helmet",
             new ArmorItem(GenesisArmor.DIVAN, ArmorItem.Type.HELMET, new Item.Settings().fireproof()));

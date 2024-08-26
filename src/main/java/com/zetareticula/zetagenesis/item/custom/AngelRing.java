@@ -2,6 +2,7 @@ package com.zetareticula.zetagenesis.item.custom;
 
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -33,18 +34,20 @@ public class AngelRing extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if (world.isClient) {   return TypedActionResult.pass(user.getStackInHand(hand)); } {
-
+            user.getStackInHand(hand).damage(1, user, EquipmentSlot.MAINHAND);
             if
             (user.getAbilities().allowFlying) {
                 user.getAbilities().allowFlying = false;
                 user.getAbilities().flying = false;
                 user.sendMessage(Text.translatable("message.zetasgenesis.angelring.disable"), false);
 
+
             } else {
                 user.getAbilities().flying = true;
                 user.getAbilities().allowFlying = true;
                 user.sendMessage(Text.translatable("message.zetasgenesis.angelring.enable"), false);
                 world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_BREEZE_DEATH, SoundCategory.BLOCKS, 10.0F, 1.0F);
+
             }
 
             user.sendAbilitiesUpdate();

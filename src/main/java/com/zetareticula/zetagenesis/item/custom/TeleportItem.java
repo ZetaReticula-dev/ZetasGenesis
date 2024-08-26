@@ -1,9 +1,13 @@
 package com.zetareticula.zetagenesis.item.custom;
 
+import com.zetareticula.zetagenesis.item.GenesisItems;
 import com.zetareticula.zetagenesis.sounds.GenesisSounds;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Hand;
@@ -17,14 +21,16 @@ import net.minecraft.world.World;
 public class TeleportItem extends Item {
     private static final int COOLDOWN_TICKS = 200;  // 10 seconds cooldown (20 ticks = 1 second)
 
-    public TeleportItem(Settings settings) {
+
+    public TeleportItem(Settings settings, int damagePerUse) {
         super(settings);
+
     }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
         ItemStack itemStack = player.getStackInHand(hand);
-
+        player.getStackInHand(hand).damage(1,player, EquipmentSlot.MAINHAND);
         // Check if item is on cooldown
         if (player.getItemCooldownManager().isCoolingDown(this)) {
             return TypedActionResult.fail(itemStack);  // Prevent item usage if on cooldown
