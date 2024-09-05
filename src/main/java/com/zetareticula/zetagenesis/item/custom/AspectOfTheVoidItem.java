@@ -1,13 +1,10 @@
 package com.zetareticula.zetagenesis.item.custom;
 
-import com.zetareticula.zetagenesis.item.GenesisItems;
 import com.zetareticula.zetagenesis.sounds.GenesisSounds;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Hand;
@@ -18,11 +15,11 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
 
-public class TeleportItem extends Item {
+public class AspectOfTheVoidItem extends Item {
     private static final int COOLDOWN_TICKS = 200;  // 10 seconds cooldown (20 ticks = 1 second)
 
 
-    public TeleportItem(Settings settings, int damagePerUse) {
+    public AspectOfTheVoidItem(Settings settings) {
         super(settings);
 
     }
@@ -38,7 +35,7 @@ public class TeleportItem extends Item {
 
         if (!world.isClient) {  // Only execute on the server side
             // Determine raycast distance
-            double maxDistance = player.isSneaking() ? 50.0D : 14.0D;
+            double maxDistance = player.isSneaking() ? 40.0D : 12.0D;
 
             // Get player's look vector and start position
             Vec3d lookVec = player.getRotationVec(1.0F);

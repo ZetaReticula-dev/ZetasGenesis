@@ -19,6 +19,10 @@ public class GenesisBlocks {
             new Block(AbstractBlock.Settings.create().strength(0.75F).requiresTool().mapColor(MapColor.BRIGHT_RED)
                     .instrument(NoteBlockInstrument.HARP).sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
+    public static final Block WARP_PIPE = registerBlock("warp_pipe",
+            new Block(AbstractBlock.Settings.create().strength(0.75F).requiresTool().mapColor(MapColor.GREEN).nonOpaque()
+                    .instrument(NoteBlockInstrument.HARP).sounds(BlockSoundGroup.COPPER)));
+
     public static final Block CALCITE_BRICKS = registerBlock("calcite_bricks",
             new Block(AbstractBlock.Settings.create().strength(0.75F).requiresTool().mapColor(MapColor.TERRACOTTA_WHITE)
                     .instrument(NoteBlockInstrument.BASEDRUM).sounds(BlockSoundGroup.CALCITE)));
@@ -66,6 +70,10 @@ public class GenesisBlocks {
 
     public static final Block POLISHED_CALCITE_SLAB = registerBlock("polished_calcite_slab",
             new SlabBlock(AbstractBlock.Settings.copy(POLISHED_CALCITE)));
+
+    //ENDERIUM
+    public static final Block ENDERIUM_ORE = registerBlock("enderium_ore",
+            new Block(AbstractBlock.Settings.create().strength(50.0F, 1200.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
 
     public static final Block GRIMSTONE = registerBlock("grimstone",
             new Block(AbstractBlock.Settings.copy(DEEPSLATE)));

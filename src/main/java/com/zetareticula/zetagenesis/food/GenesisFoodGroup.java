@@ -21,6 +21,7 @@ public class GenesisFoodGroup {
                         entries.add(GenesisItems.KRABBY_PATTY);
                         entries.add(GenesisItems.ICE_CREAM_SUNRISE);
                         entries.add(GenesisItems.GOD_POTION);
+                        entries.add(GenesisItems.CINNAMON_ROLL);
 
                     })
 

@@ -33,6 +33,7 @@ public class GenesisBlockGroup {
                         entries.add(GenesisBlocks.RAINBOW_BLOCK);
                         entries.add(GenesisBlocks.GRIMSTONE);
                         entries.add(GenesisBlocks.COBBLED_GRIMSTONE);
+                        entries.add(GenesisBlocks.ENDERIUM_ORE);
 
                     })
 

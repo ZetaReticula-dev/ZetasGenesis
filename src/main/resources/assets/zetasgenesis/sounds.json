@@ -1,8 +1,16 @@
 {
-  "instant_transmission": {
-    "subtitle": "sounds.zetasgenesis.instant_transmission",
-    "sounds": [
-      "zetasgenesis:instant_transmission"
-    ]
-  }
+    "music_disc.ui_theme": {
+        "sounds": [
+            {
+                "name": "records/ui_theme"
+            }
+        ]
+    },
+    "instant_transmission": {
+        "subtitle": "sounds.zetasgenesis.instant_transmission",
+        "sounds": [
+            "zetasgenesis:instant_transmission"
+        ]
+    }
+
 }

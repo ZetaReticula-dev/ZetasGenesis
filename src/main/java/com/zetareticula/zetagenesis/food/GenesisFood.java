@@ -1,5 +1,6 @@
 package com.zetareticula.zetagenesis.food;
 
+import com.zetareticula.zetagenesis.item.GenesisItems;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -33,5 +34,8 @@ public class GenesisFood {
 
     public static final FoodComponent KRABBY_PATTY = new FoodComponent.Builder()
             .nutrition(7).saturationModifier(0.3F).build();
+
+    public static final FoodComponent CINNAMON_ROLL = new FoodComponent.Builder()
+            .nutrition(40).saturationModifier(20.0F).alwaysEdible().snack().build();
 
 }

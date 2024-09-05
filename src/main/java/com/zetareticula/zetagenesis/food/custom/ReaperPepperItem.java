@@ -1,4 +1,4 @@
-package com.zetareticula.zetagenesis.item.custom;
+package com.zetareticula.zetagenesis.food.custom;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributes;

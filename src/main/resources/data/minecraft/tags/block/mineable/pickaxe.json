@@ -14,6 +14,7 @@
     "zetasgenesis:calcite_slab",
     "zetasgenesis:calcite_brick_slab",
     "zetasgenesis:calcite_tile_slab",
-    "zetasgenesis:polished_calcite_slab"
+    "zetasgenesis:polished_calcite_slab",
+    "zetasgenesis:enderium_ore"
   ]
 }

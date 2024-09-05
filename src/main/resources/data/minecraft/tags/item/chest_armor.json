@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "zetasgenesis:divan_chestplate",
-    "zetasgenesis:enderium_chestplate"
+    "zetasgenesis:enderium_chestplate",
+    "zetasgenesis:glitch_infused_chestplate",
+    "zetasgenesis:energy_chestplate"
   ]
 }
