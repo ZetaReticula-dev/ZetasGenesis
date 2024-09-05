@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "zetasgenesis:aspect_of_the_void"
+    },
+    {
+      "item": "zetasgenesis:warped_stone"
+    }
+  ],
+  "result": {
+    "id": "zetasgenesis:warped_aspect_of_the_void",
+    "count": 1
+  }
+}

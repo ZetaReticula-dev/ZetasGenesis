@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#N#",
+    "#R#",
+    " D "
+  ],
+  "key": {
+    "#": {
+      "item": "zetasgenesis:transmission_tuner"
+    },
+    "N": {
+      "item": "zetasgenesis:aspect_of_the_end"
+    },
+    "R": {
+      "item": "zetasgenesis:instant_transmission_conduit"
+    },
+    "D": {
+      "item": "zetasgenesis:instant_transmission_merger"
+    }
+  },
+  "result": {
+    "id": "zetasgenesis:aspect_of_the_void",
+    "count": 1
+  }
+}
