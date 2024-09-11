@@ -44,6 +44,7 @@ public class AspectOfTheVoidItem extends Item {
 
             // Play different sounds based on whether the player is sneaking
             if (player.isSneaking()) {
+                player.getStackInHand(hand).damage(3,player, EquipmentSlot.MAINHAND);
                 world.playSound(null, player.getX(), player.getY(), player.getZ(), GenesisSounds.INSTANT_TRANSMISSION, SoundCategory.BLOCKS, 10.0F, 1.0F);
                 // Apply cooldown when sneaking
                 player.getItemCooldownManager().set(this, COOLDOWN_TICKS);

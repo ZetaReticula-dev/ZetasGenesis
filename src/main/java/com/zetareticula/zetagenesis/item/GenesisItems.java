@@ -23,6 +23,9 @@ public class GenesisItems {
 
     public static final Item URANIUM_FUEL_ROD = registerItem("uranium_fuel_rod",
             new MaceItem(new Item.Settings()));
+        //HALO STUFF
+    public static final Item M6D_MAGNUM = registerItem("m6d_magnum",
+            new MagnumItem(new Item.Settings().maxCount(1).maxDamage(12)));
 
     public static final Item TUNING_FORK = registerItem("tuning_fork",
             new TuningForkItem(new Item.Settings().maxDamage(16).maxCount(1)));
@@ -52,16 +55,16 @@ public class GenesisItems {
             new Item(new Item.Settings()));
 
     public static final Item AOTE = registerItem("aspect_of_the_end",
-            new AspectOfTheEndItem(new Item.Settings().maxDamage(64).maxCount(1)));
+            new AspectOfTheEndItem(new Item.Settings().maxDamage(32).maxCount(1)));
 
     public static final Item WARPED_AOTE = registerItem("warped_aspect_of_the_end",
-            new WarpedAspectOfTheEndItem(new Item.Settings().rarity(Rarity.UNCOMMON).maxDamage(128).maxCount(1)));
+            new WarpedAspectOfTheEndItem(new Item.Settings().rarity(Rarity.UNCOMMON).maxDamage(64).maxCount(1)));
 
     public static final Item AOTV = registerItem("aspect_of_the_void",
-            new AspectOfTheVoidItem(new Item.Settings().rarity(Rarity.UNCOMMON).maxDamage(128).maxCount(1)));
+            new AspectOfTheVoidItem(new Item.Settings().rarity(Rarity.UNCOMMON).maxDamage(64).maxCount(1)));
 
     public static final Item WARPED_AOTV = registerItem("warped_aspect_of_the_void",
-            new WarpedAspectOfTheVoidItem(new Item.Settings().rarity(Rarity.RARE).maxDamage(256).maxCount(1)));
+            new WarpedAspectOfTheVoidItem(new Item.Settings().rarity(Rarity.RARE).maxDamage(128).maxCount(1)));
         //DIVAN STUFF
     public static final Item DIVAN_HELMET = registerItem("divan_helmet",
             new ArmorItem(GenesisArmor.DIVAN, ArmorItem.Type.HELMET, new Item.Settings().fireproof().maxDamage

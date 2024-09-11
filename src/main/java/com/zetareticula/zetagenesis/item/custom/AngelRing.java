@@ -25,7 +25,7 @@ public class AngelRing extends Item {
         ServerTickEvents.END_SERVER_TICK.register(server -> {
             for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {
                 if (player.getAbilities().flying) {
-                    player.addExhaustion(0.05F);
+                    player.addExhaustion(0.08F);
                 }
             }
         });

@@ -4,6 +4,8 @@ import com.zetareticula.zetagenesis.item.GenesisItems;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 
 public class GenesisFood {
     public static final FoodComponent LEGENDARY_HERO = new FoodComponent.Builder()
@@ -25,7 +27,7 @@ public class GenesisFood {
             .statusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 28800, 0), 1.0F)
             .statusEffect(new StatusEffectInstance(StatusEffects.LUCK, 28800, 6), 1.0F)
             .statusEffect(new StatusEffectInstance(StatusEffects.HASTE, 28800, 1), 1.0F)
-            .statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 28800, 1), 1.0F).build();
+            .statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 28800, 1), 1.0F).alwaysEdible().usingConvertsTo(Items.GLASS_BOTTLE).build();
 
     public static final FoodComponent TRIPLE_GOOBER_BERRY_SUNRISE = new FoodComponent.Builder()
             .nutrition(6).saturationModifier(0.2F).statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 3600, 0),

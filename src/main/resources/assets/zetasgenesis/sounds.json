@@ -11,6 +11,12 @@
         "sounds": [
             "zetasgenesis:instant_transmission"
         ]
+    },
+    "magnum_fire": {
+        "subtitle": "sounds.zetasgenesis.magnum_fire",
+        "sounds": [
+            "zetasgenesis:magnum_fire"
+        ]
     }
 
 }
