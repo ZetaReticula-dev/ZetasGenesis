@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld_32",
+  "textures": {
+    "layer0": "zetasgenesis:item/ma5b_assault_rifle"
+  }
+}
