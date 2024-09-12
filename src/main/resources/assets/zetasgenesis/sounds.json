@@ -17,6 +17,12 @@
         "sounds": [
             "zetasgenesis:magnum_fire"
         ]
+    },
+    "ma5b_fire": {
+        "subtitle": "sounds.zetasgenesis.ma5b_fire",
+        "sounds": [
+            "zetasgenesis:ma5b_fire"
+        ]
     }
 
 }

@@ -27,6 +27,9 @@ public class GenesisItems {
     public static final Item M6D_MAGNUM = registerItem("m6d_magnum",
             new MagnumItem(new Item.Settings().maxCount(1).maxDamage(12)));
 
+    public static final Item MA5B_ASSAULT_RIFLE = registerItem("ma5b_assault_rifle",
+            new AssaultRifleItem(new Item.Settings().maxCount(1).maxDamage(60)));
+
     public static final Item TUNING_FORK = registerItem("tuning_fork",
             new TuningForkItem(new Item.Settings().maxDamage(16).maxCount(1)));
 

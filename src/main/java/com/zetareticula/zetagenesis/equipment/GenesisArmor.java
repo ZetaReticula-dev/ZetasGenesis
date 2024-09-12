@@ -58,10 +58,10 @@ public class GenesisArmor {
     public static final RegistryEntry<ArmorMaterial> ENDERIUM = registerMaterial("enderium",
             // Defense (protection) point values for each armor piece.
             Map.of(
-                    ArmorItem.Type.HELMET, 4,
-                    ArmorItem.Type.CHESTPLATE, 9,
-                    ArmorItem.Type.LEGGINGS, 7,
-                    ArmorItem.Type.BOOTS, 4
+                    ArmorItem.Type.HELMET, 3,
+                    ArmorItem.Type.CHESTPLATE, 8,
+                    ArmorItem.Type.LEGGINGS, 6,
+                    ArmorItem.Type.BOOTS, 3
             ),
             // Enchantability. For reference, leather has 15, iron has 9, and diamond has 10.
             25,
@@ -77,10 +77,10 @@ public class GenesisArmor {
     public static final RegistryEntry<ArmorMaterial> ENERGY = registerMaterial("energy",
             // Defense (protection) point values for each armor piece.
             Map.of(
-                    ArmorItem.Type.HELMET, 4,
-                    ArmorItem.Type.CHESTPLATE, 9,
-                    ArmorItem.Type.LEGGINGS, 7,
-                    ArmorItem.Type.BOOTS, 4
+                    ArmorItem.Type.HELMET, 3,
+                    ArmorItem.Type.CHESTPLATE, 8,
+                    ArmorItem.Type.LEGGINGS, 6,
+                    ArmorItem.Type.BOOTS, 3
             ),
             // Enchantability. For reference, leather has 15, iron has 9, and diamond has 10.
             25,
@@ -96,10 +96,10 @@ public class GenesisArmor {
     public static final RegistryEntry<ArmorMaterial> GLITCH = registerMaterial("glitch",
             // Defense (protection) point values for each armor piece.
             Map.of(
-                    ArmorItem.Type.HELMET, 4,
-                    ArmorItem.Type.CHESTPLATE, 9,
-                    ArmorItem.Type.LEGGINGS, 7,
-                    ArmorItem.Type.BOOTS, 4
+                    ArmorItem.Type.HELMET, 3,
+                    ArmorItem.Type.CHESTPLATE, 8,
+                    ArmorItem.Type.LEGGINGS, 6,
+                    ArmorItem.Type.BOOTS, 3
             ),
             // Enchantability. For reference, leather has 15, iron has 9, and diamond has 10.
             25,
