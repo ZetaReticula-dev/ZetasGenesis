@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "zetasgenesis:item/transmission_tuner"
+  }
+}

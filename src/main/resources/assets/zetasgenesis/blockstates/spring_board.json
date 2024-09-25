@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=true": {
+      "model": "zetasgenesis:block/spring_board_1"
+    },
+    "active=false": {
+      "model": "zetasgenesis:block/spring_board"
+    }
+  }
+}

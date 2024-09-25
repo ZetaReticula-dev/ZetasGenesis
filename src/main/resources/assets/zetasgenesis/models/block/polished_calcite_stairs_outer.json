@@ -1,8 +1,0 @@
-{
-  "parent": "block/outer_stairs",
-  "textures": {
-    "bottom": "zetasgenesis:block/polished_calcite",
-    "top": "zetasgenesis:block/polished_calcite",
-    "side": "zetasgenesis:block/polished_calcite"
-  }
-}

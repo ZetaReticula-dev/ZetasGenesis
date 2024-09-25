@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "zetasgenesis:block/smooth_amethyst_bricks",
+    "side": "zetasgenesis:block/smooth_amethyst_bricks",
+    "top": "zetasgenesis:block/smooth_amethyst_bricks"
+  }
+}

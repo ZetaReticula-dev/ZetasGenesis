@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "zetasgenesis:block/amethyst_tiles",
+    "side": "zetasgenesis:block/amethyst_tiles",
+    "top": "zetasgenesis:block/amethyst_tiles"
+  }
+}

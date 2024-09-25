@@ -16,6 +16,7 @@ public class GenesisSounds {
     public static final SoundEvent INSTANT_TRANSMISSION = registerSound("instant_transmission");
     public static final SoundEvent MAGNUM_FIRE = registerSound("magnum_fire");
     public static final SoundEvent MA5B_FIRE = registerSound("ma5b_fire");
+    public static final SoundEvent SPRING_BOARD = registerSound("spring_board");
     public static final SoundEvent ENDERITE_EQUIP = registerSound("enderite_equip");
 
     // actual registration of all the custom SoundEvents

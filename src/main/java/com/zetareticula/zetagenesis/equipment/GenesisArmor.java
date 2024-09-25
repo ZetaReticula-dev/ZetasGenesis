@@ -112,6 +112,43 @@ public class GenesisArmor {
             // Guidite is NOT dyeable, so we will pass false.
             false);
 
+    public static final RegistryEntry<ArmorMaterial> DOMINUS = registerMaterial("dominus",
+            // Defense (protection) point values for each armor piece.
+            Map.of(
+                    ArmorItem.Type.HELMET, 3,
+                    ArmorItem.Type.CHESTPLATE, 8,
+                    ArmorItem.Type.LEGGINGS, 6,
+                    ArmorItem.Type.BOOTS, 3
+            ),
+            // Enchantability. For reference, leather has 15, iron has 9, and diamond has 10.
+            25,
+            // The sound played when the armor is equipped.
+            SoundEvents.ITEM_ARMOR_EQUIP_CHAIN,
+            // The ingredient(s) used to repair the armor.
+            () -> Ingredient.ofItems(GenesisItems.ENDERIUM_INGOT),
+            4.0F,
+            0.1F,
+            // Guidite is NOT dyeable, so we will pass false.
+            false);
+
+    public static final RegistryEntry<ArmorMaterial> HARDENED_LEATHER = registerMaterial("hardened_leather",
+            // Defense (protection) point values for each armor piece.
+            Map.of(
+                    ArmorItem.Type.HELMET, 3,
+                    ArmorItem.Type.CHESTPLATE, 8,
+                    ArmorItem.Type.LEGGINGS, 6,
+                    ArmorItem.Type.BOOTS, 3
+            ),
+            // Enchantability. For reference, leather has 15, iron has 9, and diamond has 10.
+            25,
+            // The sound played when the armor is equipped.
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
+            // The ingredient(s) used to repair the armor.
+            () -> Ingredient.ofItems(GenesisItems.ENDERIUM_INGOT),
+            4.0F,
+            0.1F,
+            // Guidite is NOT dyeable, so we will pass false.
+            true);
     public static RegistryEntry<ArmorMaterial> registerMaterial(String id, Map<ArmorItem.Type, Integer> defensePoints, int enchantability, RegistryEntry<SoundEvent> equipSound, Supplier<Ingredient> repairIngredientSupplier, float toughness, float knockbackResistance, boolean dyeable) {
         // Get the supported layers for the armor material
         List<ArmorMaterial.Layer> layers = List.of(

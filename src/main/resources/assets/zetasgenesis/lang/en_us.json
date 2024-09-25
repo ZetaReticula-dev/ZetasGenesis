@@ -21,6 +21,7 @@
   "item.zetasgenesis.divan_leggings": "Leggings of Divan",
   "item.zetasgenesis.divan_boots": "Boots of Divan",
   "item.zetasgenesis.legendary_hero": "Legendary Hero",
+  "item.zetasgenesis.ditto_item": "Ditto Item",
   "sounds.zetasgenesis.instant_transmission": "Player uses Instant Transmission",
   "item.zetasgenesis.reaper_pepper": "Reaper Pepper",
   "item.zetasgenesis.aspect_of_the_void": "Aspect of The Void",
@@ -50,6 +51,27 @@
   "block.zetasgenesis.calcite_brick_slab": "Calcite Brick Slab",
   "block.zetasgenesis.calcite_tile_slab": "Calcite Tile Slab",
   "block.zetasgenesis.polished_calcite_slab": "Polished Calcite Slab",
+
+  "block.zetasgenesis.amethyst_stairs": "Amethyst Stairs",
+  "block.zetasgenesis.amethyst_slab": "Amethyst Slab",
+  "block.zetasgenesis.amethyst_bricks": "Amethyst Bricks",
+  "block.zetasgenesis.amethyst_brick_stairs": "Amethyst Brick Stairs",
+  "block.zetasgenesis.amethyst_brick_slab": "Amethyst Brick Slab",
+  "block.zetasgenesis.cracked_amethyst_bricks": "Cracked Amethyst Bricks",
+  "block.zetasgenesis.amethyst_tiles": "Amethyst Tiles",
+  "block.zetasgenesis.amethyst_tile_stairs": "Amethyst Tile Stairs",
+  "block.zetasgenesis.amethyst_tile_slab": "Amethyst Tile Slab",
+  "block.zetasgenesis.cracked_amethyst_tiles": "Cracked Amethyst Tiles",
+  "block.zetasgenesis.polished_amethyst": "Polished Amethyst",
+  "block.zetasgenesis.polished_amethyst_stairs": "Polished Amethyst Stairs",
+  "block.zetasgenesis.polished_amethyst_slab": "Polished Amethyst Slab",
+  "block.zetasgenesis.smooth_amethyst_bricks": "Smooth Amethyst Bricks",
+  "block.zetasgenesis.smooth_amethyst_brick_stairs": "Smooth Amethyst Brick Stairs",
+  "block.zetasgenesis.smooth_amethyst_brick_slab": "Smooth Amethyst Brick Slab",
+  "block.zetasgenesis.cracked_smooth_amethyst_bricks": "Cracked Smooth Amethyst Bricks",
+
+  "block.zetasgenesis.stove": "Stove",
+
   "item.zetasgenesis.glitch_infused_helmet": "Glitch Infused Helmet",
   "item.zetasgenesis.glitch_infused_chestplate": "Glitch Infused Chestplate",
   "item.zetasgenesis.glitch_infused_leggings": "Glitch Infused Leggings",
@@ -63,5 +85,8 @@
   "message.zetasgenesis.angelring.disable": "§cFlight Disabled!",
   "itemgroup.zetasgenesis.genesis_blocks": "Genesis Blocks",
   "itemgroup.zetasgenesis.genesis_items": "Genesis Items",
-  "itemgroup.zetasgenesis.genesisfood": "Zeta's Food"
+  "itemgroup.zetasgenesis.genesisfood": "Zeta's Food",
+  "itemgroup.zetasgenesis.farmer_delight": "Farmer's Delight",
+
+  "container.zetasgenesis.basket_block": "Basket"
 }

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "zetasgenesis:block/enderium_ore"
+    }
+  }
+}

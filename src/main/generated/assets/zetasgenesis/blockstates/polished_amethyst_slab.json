@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "zetasgenesis:block/polished_amethyst_slab"
+    },
+    "type=double": {
+      "model": "zetasgenesis:block/polished_amethyst"
+    },
+    "type=top": {
+      "model": "zetasgenesis:block/polished_amethyst_slab_top"
+    }
+  }
+}

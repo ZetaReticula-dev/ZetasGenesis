@@ -19,7 +19,13 @@ public enum GenesisToolMaterials implements ToolMaterial{
     DIAMOND_HAMMER(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 800,6.0F,5.0F,10,
             () -> Ingredient.ofItems(Items.DIAMOND_BLOCK)),
     NETHERITE_HAMMER(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 1100,7.0F,6.0F,15,
-            () -> Ingredient.ofItems(Items.NETHERITE_INGOT));
+            () -> Ingredient.ofItems(Items.NETHERITE_INGOT)),
+
+    KNIFE_IRON(BlockTags.INCORRECT_FOR_IRON_TOOL, 250,6.0F,1.5F,14,
+            () -> Ingredient.ofItems(Items.IRON_INGOT)),
+    KNIFE_DIAMOND(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1561, 8.0F, 2.5F, 10, () -> Ingredient.ofItems(Items.DIAMOND)),
+    KNIFE_GOLD(BlockTags.INCORRECT_FOR_GOLD_TOOL, 32, 12.0F, -0.5F, 22, () -> Ingredient.ofItems(Items.GOLD_INGOT)),
+    KNIFE_NETHERITE(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2031, 9.0F, 3.5F, 15, () -> Ingredient.ofItems(Items.NETHERITE_INGOT));
 
 
 

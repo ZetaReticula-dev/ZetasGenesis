@@ -23,6 +23,12 @@
         "sounds": [
             "zetasgenesis:ma5b_fire"
         ]
+    },
+    "spring_board": {
+        "subtitle": "sounds.zetasgenesis.spring_board",
+        "sounds": [
+            "zetasgenesis:spring_board"
+        ]
     }
 
 }

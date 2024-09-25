@@ -3,6 +3,7 @@ package com.zetareticula.zetagenesis.item;
 import  com.zetareticula.zetagenesis.ZetaGenesis;
 import com.zetareticula.zetagenesis.equipment.GenesisArmor;
 import com.zetareticula.zetagenesis.equipment.GenesisToolMaterials;
+import com.zetareticula.zetagenesis.equipment.KnifeItem;
 import com.zetareticula.zetagenesis.food.GenesisFood;
 import com.zetareticula.zetagenesis.food.custom.GodPotion;
 import com.zetareticula.zetagenesis.food.custom.ReaperPepperItem;
@@ -17,6 +18,9 @@ public class GenesisItems {
 
     public static final Item GOD_POTION = registerItem("god_potion",
             new GodPotion(new Item.Settings().food(GenesisFood.GOD_POTION).maxCount(1)));
+
+    public static final Item DITTO_ITEM = registerItem("ditto_item",
+            new ArmorItem(GenesisArmor.DOMINUS, ArmorItem.Type.HELMET, new Item.Settings().maxCount(99)));
 
     public static final Item CINNAMON_ROLL = registerItem("cinnamon_roll",
             new Item(new Item.Settings().food(GenesisFood.CINNAMON_ROLL).maxCount(64).rarity(Rarity.UNCOMMON)));
@@ -165,6 +169,42 @@ public class GenesisItems {
     // WRENCH
     public static final Item WRENCH = registerItem("wrench",
             new WrenchItem(new Item.Settings().rarity(Rarity.EPIC).fireproof()));
+
+    // HARDENED LEATHER
+
+    public static final Item HARDENED_LEATHER_HELMET = registerItem("hardened_leather_helmet",
+            new ArmorItem(GenesisArmor.HARDENED_LEATHER, ArmorItem.Type.HELMET, new Item.Settings().rarity(Rarity.RARE).fireproof().maxDamage
+                    (ArmorItem.Type.HELMET.getMaxDamage(45))));
+
+    public static final Item HARDENED_LEATHER_CHESTPLATE = registerItem("hardened_leather_chestplate",
+            new ArmorItem(GenesisArmor.HARDENED_LEATHER, ArmorItem.Type.CHESTPLATE, new Item.Settings().rarity(Rarity.RARE).fireproof().maxDamage
+                    (ArmorItem.Type.CHESTPLATE.getMaxDamage(45))));
+
+    public static final Item HARDENED_LEATHER_LEGGINGS = registerItem("hardened_leather_leggings",
+            new ArmorItem(GenesisArmor.HARDENED_LEATHER, ArmorItem.Type.LEGGINGS, new Item.Settings().rarity(Rarity.RARE).fireproof().maxDamage
+                    (ArmorItem.Type.LEGGINGS.getMaxDamage(45))));
+
+    public static final Item HARDENED_LEATHER_BOOTS = registerItem("hardened_leather_greaves",
+            new ArmorItem(GenesisArmor.HARDENED_LEATHER, ArmorItem.Type.BOOTS, new Item.Settings().rarity(Rarity.RARE).fireproof().maxDamage
+                    (ArmorItem.Type.BOOTS.getMaxDamage(45))));
+
+    //KNIVES
+
+    public static final Item IRON_KNIFE = registerItem("iron_knife",
+            new KnifeItem(GenesisToolMaterials.KNIFE_IRON, (new Item.Settings()).attributeModifiers(KnifeItem.createAttributeModifiers
+                    (GenesisToolMaterials.KNIFE_IRON, 1, -2.0F))));
+
+    public static final Item DIAMOND_KNIFE = registerItem("diamond_knife",
+            new KnifeItem(GenesisToolMaterials.KNIFE_DIAMOND, (new Item.Settings()).attributeModifiers(KnifeItem.createAttributeModifiers
+                    (GenesisToolMaterials.KNIFE_DIAMOND, 1, -2.0F))));
+
+    public static final Item NETHERITE_KNIFE = registerItem("netherite_knife",
+            new KnifeItem(GenesisToolMaterials.KNIFE_NETHERITE, (new Item.Settings()).attributeModifiers(KnifeItem.createAttributeModifiers
+                    (GenesisToolMaterials.KNIFE_NETHERITE, 1, -2.0F))));
+
+    public static final Item GOLD_KNIFE = registerItem("gold_knife",
+            new KnifeItem(GenesisToolMaterials.KNIFE_GOLD, (new Item.Settings()).attributeModifiers(KnifeItem.createAttributeModifiers
+                    (GenesisToolMaterials.KNIFE_GOLD, 1, -2.0F))));
 
 
     private static Item registerItem(String name, Item item) {

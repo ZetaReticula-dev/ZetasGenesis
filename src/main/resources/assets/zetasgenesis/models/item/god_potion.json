@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "particle": "zetasgenesis:item/transparent",
-    "layer0": "zetasgenesis:item/god_potion"
-  }
-}
