@@ -1,6 +1,7 @@
 package com.zetareticula.zetagenesis;
 
 import com.zetareticula.zetagenesis.block.GenesisBlockEntity;
+import com.zetareticula.zetagenesis.block.entity.BasketBlockEntity;
 import com.zetareticula.zetagenesis.groups.FarmerDelightGroup;
 import com.zetareticula.zetagenesis.groups.GenesisBlockGroup;
 import com.zetareticula.zetagenesis.block.GenesisBlocks;
@@ -17,6 +18,7 @@ import com.zetareticula.zetagenesis.equipment.GenesisArmor;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.fabricmc.fabric.api.transfer.v1.item.ItemStorage;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -46,6 +48,8 @@ public class ZetaGenesis implements ModInitializer {
 		PlayerDeathEvent.registerPlayerDeathEvent();
 		GenesisEnchantments.load();
 		FuelRegistry.INSTANCE.add(GenesisItems.URANIUM_FUEL_ROD, 32767);
+
+		ItemStorage.SIDED.registerForBlockEntity(BasketBlockEntity::getInventoryProvider, GenesisBlockEntity.BASKET_BLOCK_ENTITY);
 
 	}
 	public static Identifier id(String path) {
