@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "zetasgenesis:block/basket",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "zetasgenesis:block/basket",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "zetasgenesis:block/basket",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "zetasgenesis:block/basket",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "zetasgenesis:block/basket"
+    },
+    "facing=west": {
+      "model": "zetasgenesis:block/basket",
+      "x": 90,
+      "y": 270
+    }
+  }
+}
