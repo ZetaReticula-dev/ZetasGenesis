@@ -9,6 +9,7 @@ import net.minecraft.network.codec.PacketCodec;
 import net.minecraft.network.packet.CustomPayload;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.screen.CraftingScreenHandler;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.math.BlockPos;
@@ -17,6 +18,9 @@ public class GenesisScreenHandlerType {
 
     public static final ScreenHandlerType<BasketBlockScreenHandler> BASKET_BLOCK_SCREEN =
             register("basket_block_screen", BasketBlockScreenHandler::new, BlockPosPayload.PACKET_CODEC);
+
+    public static final ScreenHandlerType<CabinetBlockScreenHandler> CABINET_BLOCK_SCREEN =
+            register("cabinet_block_screen", CabinetBlockScreenHandler::new, BlockPosPayload.PACKET_CODEC);
 
     public static <T extends ScreenHandler, D extends CustomPayload> ExtendedScreenHandlerType<T, D>
         register(String name, ExtendedScreenHandlerType.ExtendedFactory<T, D> factory,

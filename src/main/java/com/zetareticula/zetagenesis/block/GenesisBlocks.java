@@ -1,9 +1,7 @@
 package com.zetareticula.zetagenesis.block;
 
 import com.zetareticula.zetagenesis.ZetaGenesis;
-import com.zetareticula.zetagenesis.block.custom.BasketBlock;
-import com.zetareticula.zetagenesis.block.custom.SpringBoard;
-import com.zetareticula.zetagenesis.block.custom.StoveBlock;
+import com.zetareticula.zetagenesis.block.custom.*;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.BlockItem;
@@ -166,7 +164,76 @@ public class GenesisBlocks {
             new StoveBlock(AbstractBlock.Settings.copy(BRICKS)));
 
     public static final Block BASKET = registerBlock("basket",
-            new BasketBlock(AbstractBlock.Settings.copy(BAMBOO_PLANKS)));
+            new BasketBlock(AbstractBlock.Settings.copy(BAMBOO_PLANKS).nonOpaque()));
+
+    //CABINETS
+
+    public static final Block OAK_CABINET = registerBlock("oak_cabinet",
+            new CabinetBlock(AbstractBlock.Settings.copy(BARREL)));
+
+    public static final Block SPRUCE_CABINET = registerBlock("spruce_cabinet",
+            new CabinetBlock(AbstractBlock.Settings.copy(BARREL)));
+
+    public static final Block BIRCH_CABINET = registerBlock("birch_cabinet",
+            new CabinetBlock(AbstractBlock.Settings.copy(BARREL)));
+
+    public static final Block JUNGLE_CABINET = registerBlock("jungle_cabinet",
+            new CabinetBlock(AbstractBlock.Settings.copy(BARREL)));
+
+    public static final Block ACACIA_CABINET = registerBlock("acacia_cabinet",
+            new CabinetBlock(AbstractBlock.Settings.copy(BARREL)));
+
+    public static final Block DARK_OAK_CABINET = registerBlock("dark_oak_cabinet",
+            new CabinetBlock(AbstractBlock.Settings.copy(BARREL)));
+
+    public static final Block MANGROVE_CABINET = registerBlock("mangrove_cabinet",
+            new CabinetBlock(AbstractBlock.Settings.copy(BARREL)));
+
+    public static final Block CHERRY_CABINET = registerBlock("cherry_cabinet",
+            new CabinetBlock(AbstractBlock.Settings.copy(BARREL).sounds(BlockSoundGroup.CHERRY_WOOD)));
+
+    public static final Block BAMBOO_CABINET = registerBlock("bamboo_cabinet",
+            new CabinetBlock(AbstractBlock.Settings.copy(BARREL).sounds(BlockSoundGroup.BAMBOO)));
+
+    public static final Block CRIMSON_CABINET = registerBlock("crimson_cabinet",
+            new CabinetBlock(AbstractBlock.Settings.copy(BARREL).sounds(BlockSoundGroup.NETHER_WOOD)));
+
+    public static final Block WARPED_CABINET = registerBlock("warped_cabinet",
+            new CabinetBlock(AbstractBlock.Settings.copy(BARREL).sounds(BlockSoundGroup.NETHER_WOOD)));
+
+    //CRAFTING TABLES
+
+    public static final Block ACACIA_CRAFTING_TABLE = registerBlock("acacia_crafting_table",
+            new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
+
+    public static final Block BAMBOO_CRAFTING_TABLE = registerBlock("bamboo_crafting_table",
+            new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
+
+    public static final Block BIRCH_CRAFTING_TABLE = registerBlock("birch_crafting_table",
+            new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
+
+    public static final Block CHERRY_CRAFTING_TABLE = registerBlock("cherry_crafting_table",
+            new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
+
+    public static final Block CRIMSON_CRAFTING_TABLE = registerBlock("crimson_crafting_table",
+            new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
+
+    public static final Block DARK_OAK_CRAFTING_TABLE = registerBlock("dark_oak_crafting_table",
+            new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
+
+    public static final Block JUNGLE_CRAFTING_TABLE = registerBlock("jungle_crafting_table",
+            new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
+
+    public static final Block MANGROVE_CRAFTING_TABLE = registerBlock("mangrove_crafting_table",
+            new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
+
+    public static final Block SPRUCE_CRAFTING_TABLE = registerBlock("spruce_crafting_table",
+            new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
+
+    public static final Block WARPED_CRAFTING_TABLE = registerBlock("warped_crafting_table",
+            new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
+
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

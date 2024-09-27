@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "zetasgenesis:block/oak_cabinet_front",
+    "side": "zetasgenesis:block/oak_cabinet_side",
+    "top": "zetasgenesis:block/oak_cabinet_top"
+  }
+}

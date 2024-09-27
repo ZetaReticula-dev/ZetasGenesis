@@ -15,6 +15,7 @@ import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockRotation;
+import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -98,6 +99,19 @@ public class BasketBlock extends Block implements BlockEntityProvider {
     @Override
     public @Nullable BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
         return GenesisBlockEntity.BASKET_BLOCK_ENTITY.instantiate(pos, state);
+    }
+
+    @Override
+    public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
+        if (state.getBlock() != newState.getBlock()) {
+            BlockEntity blockEntity = world.getBlockEntity(pos);
+            if (blockEntity instanceof BasketBlockEntity basketBlockEntity) {
+                ItemScatterer.spawn(world, pos, basketBlockEntity.getInventory());
+                // update comparators
+                world.updateComparators(pos,this);
+            }
+            super.onStateReplaced(state, world, pos, newState, moved);
+        }
     }
 
 }

@@ -97,4 +97,5 @@ public class BasketBlockEntity extends BlockEntity implements ExtendedScreenHand
     public SimpleInventory getInventory() {
         return this.inventory;
     }
+
 }

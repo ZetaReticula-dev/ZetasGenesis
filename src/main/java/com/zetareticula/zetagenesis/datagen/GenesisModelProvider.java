@@ -116,7 +116,10 @@ public class GenesisModelProvider extends FabricModelProvider {
         itemModelGenerator.register(GenesisItems.GLITCH_LEGGINGS, Models.GENERATED);
         itemModelGenerator.register(GenesisItems.GLITCH_BOOTS, Models.GENERATED);
         itemModelGenerator.register(GenesisItems.WRENCH, Models.HANDHELD);
-
+        itemModelGenerator.register(GenesisItems.IRON_KNIFE, Models.HANDHELD);
+        itemModelGenerator.register(GenesisItems.DIAMOND_KNIFE, Models.HANDHELD);
+        itemModelGenerator.register(GenesisItems.NETHERITE_KNIFE, Models.HANDHELD);
+        itemModelGenerator.register(GenesisItems.GOLDEN_KNIFE, Models.HANDHELD);
 
     }
 }

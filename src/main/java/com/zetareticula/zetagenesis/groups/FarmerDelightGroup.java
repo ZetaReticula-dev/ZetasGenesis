@@ -18,10 +18,22 @@ public class FarmerDelightGroup {
                     .displayName(Text.translatable("itemgroup.zetasgenesis.farmer_delight"))
                     .entries((displayContext, entries) -> {
                         entries.add(GenesisBlocks.STOVE);
+                        entries.add(GenesisBlocks.BASKET);
+                        entries.add(GenesisBlocks.OAK_CABINET);
+                        entries.add(GenesisBlocks.SPRUCE_CABINET);
+                        entries.add(GenesisBlocks.BIRCH_CABINET);
+                        entries.add(GenesisBlocks.JUNGLE_CABINET);
+                        entries.add(GenesisBlocks.ACACIA_CABINET);
+                        entries.add(GenesisBlocks.DARK_OAK_CABINET);
+                        entries.add(GenesisBlocks.MANGROVE_CABINET);
+                        entries.add(GenesisBlocks.CHERRY_CABINET);
+                        entries.add(GenesisBlocks.BAMBOO_CABINET);
+                        entries.add(GenesisBlocks.CRIMSON_CABINET);
+                        entries.add(GenesisBlocks.WARPED_CABINET);
                         entries.add(GenesisItems.IRON_KNIFE);
                         entries.add(GenesisItems.DIAMOND_KNIFE);
                         entries.add(GenesisItems.NETHERITE_KNIFE);
-                        entries.add(GenesisItems.GOLD_KNIFE);
+                        entries.add(GenesisItems.GOLDEN_KNIFE);
 
 
                     })

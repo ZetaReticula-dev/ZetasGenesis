@@ -202,7 +202,7 @@ public class GenesisItems {
             new KnifeItem(GenesisToolMaterials.KNIFE_NETHERITE, (new Item.Settings()).attributeModifiers(KnifeItem.createAttributeModifiers
                     (GenesisToolMaterials.KNIFE_NETHERITE, 1, -2.0F))));
 
-    public static final Item GOLD_KNIFE = registerItem("gold_knife",
+    public static final Item GOLDEN_KNIFE = registerItem("golden_knife",
             new KnifeItem(GenesisToolMaterials.KNIFE_GOLD, (new Item.Settings()).attributeModifiers(KnifeItem.createAttributeModifiers
                     (GenesisToolMaterials.KNIFE_GOLD, 1, -2.0F))));
 

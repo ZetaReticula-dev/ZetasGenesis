@@ -71,6 +71,19 @@
   "block.zetasgenesis.cracked_smooth_amethyst_bricks": "Cracked Smooth Amethyst Bricks",
 
   "block.zetasgenesis.stove": "Stove",
+  "block.zetasgenesis.basket": "Basket",
+
+  "block.zetasgenesis.oak_cabinet": "Oak Cabinet",
+  "block.zetasgenesis.birch_cabinet": "Birch Cabinet",
+  "block.zetasgenesis.spruce_cabinet": "Spruce Cabinet",
+  "block.zetasgenesis.jungle_cabinet": "Jungle Cabinet",
+  "block.zetasgenesis.acacia_cabinet": "Acacia Cabinet",
+  "block.zetasgenesis.dark_oak_cabinet": "Dark Oak Cabinet",
+  "block.zetasgenesis.mangrove_cabinet": "Mangrove Cabinet",
+  "block.zetasgenesis.cherry_cabinet": "Cherry Cabinet",
+  "block.zetasgenesis.bamboo_cabinet": "Bamboo Cabinet",
+  "block.zetasgenesis.crimson_cabinet": "Crimson Cabinet",
+  "block.zetasgenesis.warped_cabinet": "Warped Cabinet",
 
   "item.zetasgenesis.glitch_infused_helmet": "Glitch Infused Helmet",
   "item.zetasgenesis.glitch_infused_chestplate": "Glitch Infused Chestplate",
@@ -80,6 +93,10 @@
   "item.zetasgenesis.energy_chestplate": "Energy Chestplate",
   "item.zetasgenesis.energy_leggings": "Energy Leggings",
   "item.zetasgenesis.energy_greaves": "Energy Greaves",
+  "item.zetasgenesis.iron_knife": "Iron Knife",
+  "item.zetasgenesis.diamond_knife": "Diamond Knife",
+  "item.zetasgenesis.netherite_knife": "Netherite Knife",
+  "item.zetasgenesis.gold_knife": "Gold Knife",
 "tooltip.zetasgenesis.beeswax.tooltip": "Eat Me!",
   "message.zetasgenesis.angelring.enable": "§aFlight Enabled!",
   "message.zetasgenesis.angelring.disable": "§cFlight Disabled!",
@@ -88,5 +105,6 @@
   "itemgroup.zetasgenesis.genesisfood": "Zeta's Food",
   "itemgroup.zetasgenesis.farmer_delight": "Farmer's Delight",
 
-  "container.zetasgenesis.basket_block": "Basket"
+  "container.zetasgenesis.basket_block": "Basket",
+  "container.zetasgenesis.cabinet_block": "Cabinet"
 }

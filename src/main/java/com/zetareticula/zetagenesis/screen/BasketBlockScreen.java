@@ -10,10 +10,13 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class BasketBlockScreen extends HandledScreen<BasketBlockScreenHandler> {
-    private static final Identifier TEXTURE = ZetaGenesis.id("textures/gui/container/basket.png");
+    private static final Identifier TEXTURE = ZetaGenesis.id("textures/gui/container/generic_27.png");
 
     public BasketBlockScreen(BasketBlockScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
+        this.backgroundWidth = 176;
+        this.backgroundHeight = 168;
+        this.playerInventoryTitleY = this.backgroundHeight - 94;
     }
 
 

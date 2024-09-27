@@ -39,14 +39,14 @@ public class BasketBlockScreenHandler extends ScreenHandler {
     private void addPlayerInventory(PlayerInventory playerInv) {
         for (int row = 0; row < 3; row++) {
             for (int column = 0; column < 9; column++) {
-                addSlot(new Slot(playerInv, 9 + (column + (row * 9)), 8 + (column * 18), 84 + (row * 18)));
+                addSlot(new Slot(playerInv, 9 + (column + (row * 9)), 8 + (column * 18), 86 + (row * 18)));
             }
         }
     }
 
     private void addPlayerHotbar(PlayerInventory playerInv) {
         for (int column = 0; column < 9; column++) {
-            addSlot(new Slot(playerInv, column, 8 + (column * 18), 142));
+            addSlot(new Slot(playerInv, column, 8 + (column * 18), 144));
         }
     }
 
@@ -72,10 +72,10 @@ public class BasketBlockScreenHandler extends ScreenHandler {
             ItemStack inSlot = slot.getStack();
             newStack = inSlot.copy();
 
-            if(slotIndex < 27) {
-                if(!insertItem(inSlot, 27, this.slots.size(), true))
+            if(slotIndex < 36) {
+                if(!insertItem(inSlot, 36, this.slots.size(), false))
                     return ItemStack.EMPTY;
-            } else if (!insertItem(inSlot, 0, 27, false))
+            } else if (!insertItem(inSlot, 0, 36, true))
                 return ItemStack.EMPTY;
 
             if(inSlot.isEmpty())
