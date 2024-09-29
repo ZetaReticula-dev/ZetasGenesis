@@ -1,0 +1,26 @@
+{
+  "values": [
+    "zetasgenesis:oak_cabinet",
+    "zetasgenesis:spruce_cabinet",
+    "zetasgenesis:birch_cabinet",
+    "zetasgenesis:jungle_cabinet",
+    "zetasgenesis:acacia_cabinet",
+    "zetasgenesis:dark_oak_cabinet",
+    "zetasgenesis:mangrove_cabinet",
+    "zetasgenesis:cherry_cabinet",
+    "zetasgenesis:bamboo_cabinet",
+    "zetasgenesis:crimson_cabinet",
+    "zetasgenesis:warped_cabinet",
+    "zetasgenesis:acacia_crafting_table",
+    "zetasgenesis:bamboo_crafting_table",
+    "zetasgenesis:birch_crafting_table",
+    "zetasgenesis:cherry_crafting_table",
+    "zetasgenesis:crimson_crafting_table",
+    "zetasgenesis:dark_oak_crafting_table",
+    "zetasgenesis:jungle_crafting_table",
+    "zetasgenesis:mangrove_crafting_table",
+    "zetasgenesis:spruce_crafting_table",
+    "zetasgenesis:warped_crafting_table",
+    "zetasgenesis:basket"
+  ]
+}

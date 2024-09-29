@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/mangrove_planks",
+    "east": "zetasgenesis:block/mangrove_crafting_table_side",
+    "north": "zetasgenesis:block/mangrove_crafting_table_front",
+    "particle": "zetasgenesis:block/mangrove_crafting_table_front",
+    "south": "zetasgenesis:block/mangrove_crafting_table_side",
+    "up": "zetasgenesis:block/mangrove_crafting_table_top",
+    "west": "zetasgenesis:block/mangrove_crafting_table_front"
+  }
+}

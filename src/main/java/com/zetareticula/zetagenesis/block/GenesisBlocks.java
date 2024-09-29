@@ -161,7 +161,7 @@ public class GenesisBlocks {
             new Block(AbstractBlock.Settings.copy(GRASS_BLOCK)));
 
     public static final Block STOVE = registerBlock("stove",
-            new StoveBlock(AbstractBlock.Settings.copy(BRICKS)));
+            new StoveBlock(AbstractBlock.Settings.copy(BRICKS).luminance(createLightLevelFromLitBlockState(15)).nonOpaque()));
 
     public static final Block BASKET = registerBlock("basket",
             new BasketBlock(AbstractBlock.Settings.copy(BAMBOO_PLANKS).nonOpaque()));
@@ -193,7 +193,7 @@ public class GenesisBlocks {
             new CabinetBlock(AbstractBlock.Settings.copy(BARREL).sounds(BlockSoundGroup.CHERRY_WOOD)));
 
     public static final Block BAMBOO_CABINET = registerBlock("bamboo_cabinet",
-            new CabinetBlock(AbstractBlock.Settings.copy(BARREL).sounds(BlockSoundGroup.BAMBOO)));
+            new CabinetBlock(AbstractBlock.Settings.copy(BARREL).sounds(BlockSoundGroup.BAMBOO_WOOD)));
 
     public static final Block CRIMSON_CABINET = registerBlock("crimson_cabinet",
             new CabinetBlock(AbstractBlock.Settings.copy(BARREL).sounds(BlockSoundGroup.NETHER_WOOD)));
@@ -207,16 +207,16 @@ public class GenesisBlocks {
             new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
 
     public static final Block BAMBOO_CRAFTING_TABLE = registerBlock("bamboo_crafting_table",
-            new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
+            new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE).sounds(BlockSoundGroup.BAMBOO_WOOD)));
 
     public static final Block BIRCH_CRAFTING_TABLE = registerBlock("birch_crafting_table",
             new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
 
     public static final Block CHERRY_CRAFTING_TABLE = registerBlock("cherry_crafting_table",
-            new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
+            new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE).sounds(BlockSoundGroup.CHERRY_WOOD)));
 
     public static final Block CRIMSON_CRAFTING_TABLE = registerBlock("crimson_crafting_table",
-            new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
+            new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE).sounds(BlockSoundGroup.NETHER_WOOD)));
 
     public static final Block DARK_OAK_CRAFTING_TABLE = registerBlock("dark_oak_crafting_table",
             new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
@@ -231,7 +231,7 @@ public class GenesisBlocks {
             new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
 
     public static final Block WARPED_CRAFTING_TABLE = registerBlock("warped_crafting_table",
-            new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
+            new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE).sounds(BlockSoundGroup.NETHER_WOOD)));
 
 
 

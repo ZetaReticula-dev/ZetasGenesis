@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/jungle_planks",
+    "east": "zetasgenesis:block/jungle_crafting_table_side",
+    "north": "zetasgenesis:block/jungle_crafting_table_front",
+    "particle": "zetasgenesis:block/jungle_crafting_table_front",
+    "south": "zetasgenesis:block/jungle_crafting_table_side",
+    "up": "zetasgenesis:block/jungle_crafting_table_top",
+    "west": "zetasgenesis:block/jungle_crafting_table_front"
+  }
+}

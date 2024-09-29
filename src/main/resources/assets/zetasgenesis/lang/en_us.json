@@ -85,6 +85,18 @@
   "block.zetasgenesis.crimson_cabinet": "Crimson Cabinet",
   "block.zetasgenesis.warped_cabinet": "Warped Cabinet",
 
+  "block.zetasgenesis.birch_crafting_table": "Birch Crafting Table",
+  "block.zetasgenesis.spruce_crafting_table": "Spruce Crafting Table",
+  "block.zetasgenesis.jungle_crafting_table": "Jungle Crafting Table",
+  "block.zetasgenesis.acacia_crafting_table": "Acacia Crafting Table",
+  "block.zetasgenesis.dark_oak_crafting_table": "Dark Oak Crafting Table",
+  "block.zetasgenesis.mangrove_crafting_table": "Mangrove Crafting Table",
+  "block.zetasgenesis.cherry_crafting_table": "Cherry Crafting Table",
+  "block.zetasgenesis.bamboo_crafting_table": "Bamboo Crafting Table",
+  "block.zetasgenesis.crimson_crafting_table": "Crimson Crafting Table",
+  "block.zetasgenesis.warped_crafting_table": "Warped Crafting Table",
+
+
   "item.zetasgenesis.glitch_infused_helmet": "Glitch Infused Helmet",
   "item.zetasgenesis.glitch_infused_chestplate": "Glitch Infused Chestplate",
   "item.zetasgenesis.glitch_infused_leggings": "Glitch Infused Leggings",

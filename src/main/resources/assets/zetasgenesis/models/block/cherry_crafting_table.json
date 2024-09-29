@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/cherry_planks",
+    "east": "zetasgenesis:block/cherry_crafting_table_side",
+    "north": "zetasgenesis:block/cherry_crafting_table_front",
+    "particle": "zetasgenesis:block/cherry_crafting_table_front",
+    "south": "zetasgenesis:block/cherry_crafting_table_side",
+    "up": "zetasgenesis:block/cherry_crafting_table_top",
+    "west": "zetasgenesis:block/cherry_crafting_table_front"
+  }
+}

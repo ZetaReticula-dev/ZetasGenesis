@@ -49,6 +49,18 @@ public class GenesisBlockGroup {
                         entries.add(GenesisBlocks.SMOOTH_AMETHYST_BRICK_STAIRS);
                         entries.add(GenesisBlocks.CRACKED_SMOOTH_AMETHYST_BRICKS);
 
+                        //CRAFTING TABLES
+                        entries.add(GenesisBlocks.ACACIA_CRAFTING_TABLE);
+                        entries.add(GenesisBlocks.BAMBOO_CRAFTING_TABLE);
+                        entries.add(GenesisBlocks.BIRCH_CRAFTING_TABLE);
+                        entries.add(GenesisBlocks.CHERRY_CRAFTING_TABLE);
+                        entries.add(GenesisBlocks.CRIMSON_CRAFTING_TABLE);
+                        entries.add(GenesisBlocks.DARK_OAK_CRAFTING_TABLE);
+                        entries.add(GenesisBlocks.JUNGLE_CRAFTING_TABLE);
+                        entries.add(GenesisBlocks.MANGROVE_CRAFTING_TABLE);
+                        entries.add(GenesisBlocks.SPRUCE_CRAFTING_TABLE);
+                        entries.add(GenesisBlocks.WARPED_CRAFTING_TABLE);
+
                         entries.add(GenesisBlocks.RAINBOW_BLOCK);
                         entries.add(GenesisBlocks.GRIMSTONE);
                         entries.add(GenesisBlocks.COBBLED_GRIMSTONE);

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/birch_planks",
+    "east": "zetasgenesis:block/birch_crafting_table_side",
+    "north": "zetasgenesis:block/birch_crafting_table_front",
+    "particle": "zetasgenesis:block/birch_crafting_table_front",
+    "south": "zetasgenesis:block/birch_crafting_table_side",
+    "up": "zetasgenesis:block/birch_crafting_table_top",
+    "west": "zetasgenesis:block/birch_crafting_table_front"
+  }
+}

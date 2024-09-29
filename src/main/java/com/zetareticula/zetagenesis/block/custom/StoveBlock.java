@@ -3,29 +3,29 @@ package com.zetareticula.zetagenesis.block.custom;
 import com.mojang.serialization.MapCodec;
 import com.zetareticula.zetagenesis.block.GenesisBlockEntity;
 import com.zetareticula.zetagenesis.block.entity.StoveBlockEntity;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockEntityProvider;
-import net.minecraft.block.BlockState;
+import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.block.entity.CampfireBlockEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.*;
 import net.minecraft.particle.ParticleTypes;
-import net.minecraft.screen.GenericContainerScreenHandler;
-import net.minecraft.screen.ScreenHandler;
+import net.minecraft.recipe.CampfireCookingRecipe;
+import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ItemActionResult;
+import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -33,50 +33,88 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class StoveBlock extends Block implements BlockEntityProvider {
+import java.util.Optional;
+
+public class StoveBlock extends BlockWithEntity {
     public static final BooleanProperty LIT = Properties.LIT;
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final MapCodec<StoveBlock> CODEC = createCodec(StoveBlock::new);
     public StoveBlock(Settings settings) {
         super(settings);
     }
+
+    @Override
+    public MapCodec<StoveBlock> getCodec() {
+        return CODEC;
+    }
+
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(LIT, FACING);
     }
+    @Override
+    protected BlockRenderType getRenderType(BlockState state) {
+        return BlockRenderType.MODEL;
+    }
 
 
     @Override
-    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        Item heldItem = stack.getItem();
+    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit)
+    { Item heldItem = stack.getItem();
+        if (world.getBlockEntity(pos) instanceof StoveBlockEntity stoveBlockEntity) {
+            ItemStack itemStack = player.getStackInHand(hand);
+            Optional<RecipeEntry<CampfireCookingRecipe>> optional = stoveBlockEntity.getRecipeFor(itemStack);
+            if (optional.isPresent()) {
+                if (!world.isClient && stoveBlockEntity.addItem(player, itemStack, ((CampfireCookingRecipe)((RecipeEntry)optional.get()).value()).getCookingTime())) {
+                    player.incrementStat(Stats.INTERACT_WITH_CAMPFIRE);
+                    return ItemActionResult.SUCCESS;
+                }
 
-        if (state.get(LIT)) {
-            if (heldItem instanceof ShovelItem) {
-                world.setBlockState(pos, state.with(LIT, false));
-                world.playSound(null, pos, SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                player.getStackInHand(hand).damage(1,player, EquipmentSlot.MAINHAND);
-                return ItemActionResult.SUCCESS;
-            } else if (heldItem == Items.WATER_BUCKET){
-                world.setBlockState(pos, state.with(LIT, false));
-                world.playSound(null, pos, SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                player.setStackInHand(hand, new ItemStack(Items.BUCKET));
-                return ItemActionResult.SUCCESS;
+                return ItemActionResult.CONSUME;
             }
 
-        } else {
-            if (heldItem == Items.FLINT_AND_STEEL) {
-                world.setBlockState(pos, state.with(LIT, true));
-                world.playSound(null, pos, SoundEvents.ITEM_FLINTANDSTEEL_USE, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                player.getStackInHand(hand).damage(1,player, EquipmentSlot.MAINHAND);
-                return ItemActionResult.SUCCESS;
-            } else if (heldItem == Items.FIRE_CHARGE) {
-                world.setBlockState(pos, state.with(LIT, true));
-                world.playSound(null, pos, SoundEvents.ITEM_FIRECHARGE_USE, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                player.getStackInHand(hand).decrement(1);
-                return ItemActionResult.SUCCESS;
-            }
+            if (state.get(LIT)) {
+                if (heldItem instanceof ShovelItem) {
+                    world.setBlockState(pos, state.with(LIT, false));
+                    world.playSound(null, pos, SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                    player.getStackInHand(hand).damage(1,player, EquipmentSlot.MAINHAND);
+                    return ItemActionResult.SUCCESS;
+                } else if (heldItem == Items.WATER_BUCKET){
+                    world.setBlockState(pos, state.with(LIT, false));
+                    world.playSound(null, pos, SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                    player.setStackInHand(hand, new ItemStack(Items.BUCKET));
+                    return ItemActionResult.SUCCESS;
+                }
+
+            } else {
+                if (heldItem == Items.FLINT_AND_STEEL) {
+                    world.setBlockState(pos, state.with(LIT, true));
+                    world.playSound(null, pos, SoundEvents.ITEM_FLINTANDSTEEL_USE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                    player.getStackInHand(hand).damage(1,player, EquipmentSlot.MAINHAND);
+                    return ItemActionResult.SUCCESS;
+                } else if (heldItem == Items.FIRE_CHARGE) {
+                    world.setBlockState(pos, state.with(LIT, true));
+                    world.playSound(null, pos, SoundEvents.ITEM_FIRECHARGE_USE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                    player.getStackInHand(hand).decrement(1);
+                    return ItemActionResult.SUCCESS;
+                }}
         }
-        return ItemActionResult.SUCCESS;
+
+
+
+        return ItemActionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+    }
+
+    @Override
+    protected void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
+        if (!state.isOf(newState.getBlock())) {
+            BlockEntity blockEntity = world.getBlockEntity(pos);
+            if (blockEntity instanceof StoveBlockEntity) {
+                ItemScatterer.spawn(world, pos, ((StoveBlockEntity)blockEntity).getItemsBeingCooked());
+            }
+
+            super.onStateReplaced(state, world, pos, newState, moved);
+        }
     }
 
     @Override
@@ -104,7 +142,7 @@ public class StoveBlock extends Block implements BlockEntityProvider {
 
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
-        if ((Boolean)state.get(LIT) && entity instanceof LivingEntity) {
+        if (state.get(LIT) && entity instanceof LivingEntity) {
             entity.damage(world.getDamageSources().campfire(), 1.0F);
         }
 
@@ -125,11 +163,13 @@ public class StoveBlock extends Block implements BlockEntityProvider {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        if (state.get(LIT)) {
-            // Use animationTick for client and cookingTick for server
-            if (world.isClient) {
-            }
+        if (world.isClient) {
+            return state.get(LIT) ? validateTicker(type, GenesisBlockEntity.STOVE_BLOCK_ENTITY, StoveBlockEntity::clientTick) : null;
+        } else {
+            return state.get(LIT)
+                    ? validateTicker(type, GenesisBlockEntity.STOVE_BLOCK_ENTITY, StoveBlockEntity::litServerTick)
+                    : validateTicker(type, GenesisBlockEntity.STOVE_BLOCK_ENTITY, StoveBlockEntity::unlitServerTick);
         }
-        return null; // No ticker when the stove isn't lit
-    }
-}
+    }}
+    // No ticker when the stove isn't lit
+

@@ -34,8 +34,6 @@ public class FarmerDelightGroup {
                         entries.add(GenesisItems.DIAMOND_KNIFE);
                         entries.add(GenesisItems.NETHERITE_KNIFE);
                         entries.add(GenesisItems.GOLDEN_KNIFE);
-
-
                     })
 
                     .build());
