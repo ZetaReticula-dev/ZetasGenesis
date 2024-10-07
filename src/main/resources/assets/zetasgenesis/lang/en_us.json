@@ -11,6 +11,11 @@
   "item.zetasgenesis.enderium_leggings": "Enderium Leggings",
   "item.zetasgenesis.enderium_boots": "Enderium Boots",
   "item.zetasgenesis.enderium_sword": "Enderium Sword",
+  "item.zetasgenesis.enderium_shovel": "Enderium Shovel",
+  "item.zetasgenesis.enderium_pickaxe": "Enderium Pickaxe",
+  "item.zetasgenesis.enderium_axe": "Enderium Axe",
+  "item.zetasgenesis.enderium_hoe": "Enderium Hoe",
+  "item.zetasgenesis.multi_tool": "Multi-tool",
   "item.zetasgenesis.iron_hammer": "Iron Hammer",
   "item.zetasgenesis.diamond_hammer": "Diamond Hammer",
   "item.zetasgenesis.netherite_hammer": "Netherite Hammer",
@@ -85,6 +90,7 @@
   "block.zetasgenesis.crimson_cabinet": "Crimson Cabinet",
   "block.zetasgenesis.warped_cabinet": "Warped Cabinet",
 
+  "block.zetasgenesis.oak_crafting_table": "Oak Crafting Table",
   "block.zetasgenesis.birch_crafting_table": "Birch Crafting Table",
   "block.zetasgenesis.spruce_crafting_table": "Spruce Crafting Table",
   "block.zetasgenesis.jungle_crafting_table": "Jungle Crafting Table",
@@ -95,6 +101,10 @@
   "block.zetasgenesis.bamboo_crafting_table": "Bamboo Crafting Table",
   "block.zetasgenesis.crimson_crafting_table": "Crimson Crafting Table",
   "block.zetasgenesis.warped_crafting_table": "Warped Crafting Table",
+
+  "item.zetasgenesis.soup_can": "Soup Can",
+  "item.zetasgenesis.saturation_soup_can": "Saturation Soup Can",
+  "item.zetasgenesis.open_saturation_soup_can": "Open Saturation Soup Can",
 
 
   "item.zetasgenesis.glitch_infused_helmet": "Glitch Infused Helmet",
@@ -108,7 +118,7 @@
   "item.zetasgenesis.iron_knife": "Iron Knife",
   "item.zetasgenesis.diamond_knife": "Diamond Knife",
   "item.zetasgenesis.netherite_knife": "Netherite Knife",
-  "item.zetasgenesis.gold_knife": "Gold Knife",
+  "item.zetasgenesis.golden_knife": "Golden Knife",
 "tooltip.zetasgenesis.beeswax.tooltip": "Eat Me!",
   "message.zetasgenesis.angelring.enable": "§aFlight Enabled!",
   "message.zetasgenesis.angelring.disable": "§cFlight Disabled!",

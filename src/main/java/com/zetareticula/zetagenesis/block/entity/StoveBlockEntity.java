@@ -112,6 +112,7 @@ public class StoveBlockEntity extends BlockEntity implements Clearable {
         }
     }
 
+
     @Override
     protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
         super.writeNbt(nbt, registryLookup);
@@ -138,6 +139,11 @@ public class StoveBlockEntity extends BlockEntity implements Clearable {
     }
 
     public boolean addItem(@Nullable LivingEntity user, ItemStack stack, int cookTime) {
+        if (hasBlockAbove()) {
+            // Do not allow placing items if there is no block above
+            return false;
+        }
+
         for (int i = 0; i < this.itemsBeingCooked.size(); i++) {
             ItemStack itemStack = this.itemsBeingCooked.get(i);
             if (itemStack.isEmpty()) {
@@ -153,6 +159,12 @@ public class StoveBlockEntity extends BlockEntity implements Clearable {
         return false;
     }
 
+    public boolean hasBlockAbove() {
+        BlockPos blockAbove = this.pos.up();  // Get the position of the block directly above
+        BlockState blockStateAbove = this.world.getBlockState(blockAbove);  // Get the state of the block at that position
+        return !blockStateAbove.isAir();  // Return true if there is a block (not air) above
+    }
+
     public static void clientTick(World world, BlockPos pos, BlockState state, StoveBlockEntity stoveBlockEntity) {
         Random random = world.random;
 
@@ -160,10 +172,21 @@ public class StoveBlockEntity extends BlockEntity implements Clearable {
 
         for (int j = 0; j < stoveBlockEntity.itemsBeingCooked.size(); j++) {
             if (!stoveBlockEntity.itemsBeingCooked.get(j).isEmpty() && random.nextFloat() < 0.2F) {
-                double x = pos.getX() + 0.5;
-                double y = pos.getY() + 1.0;  // Position above the block
-                double z = pos.getZ() + 0.5;
-                world.addParticle(ParticleTypes.SMOKE, x, y, z, 0.0, 0.1, 0.0);
+                Direction direction = Direction.fromHorizontal(Math.floorMod(j + i, 4));
+                float f = 0.3125F;
+                double d = (double)pos.getX()
+                        + 0.5
+                        - (double)((float)direction.getOffsetX() * 0.3125F)
+                        + (double)((float)direction.rotateYClockwise().getOffsetX() * 0.3125F);
+                double e = (double)pos.getY() + 0.5;
+                double g = (double)pos.getZ()
+                        + 0.5
+                        - (double)((float)direction.getOffsetZ() * 0.3125F)
+                        + (double)((float)direction.rotateYClockwise().getOffsetZ() * 0.3125F);
+
+                for (int k = 0; k < 4; k++) {
+                    world.addParticle(ParticleTypes.SMOKE, d, e, g, 0.0, 5.0E-4, 0.0);
+                }
             }
         }
     }

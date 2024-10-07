@@ -8,72 +8,54 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 
-public class HammerItem extends PickaxeItem {
-    public HammerItem(ToolMaterial material, Item.Settings settings) {
-        super(material, settings);
+import net.minecraft.item.MiningToolItem;
+import net.minecraft.item.ToolMaterial;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.hit.HitResult;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class HammerItem extends MiningToolItem {
+    public HammerItem(ToolMaterial material, Settings settings) {
+        super(material, BlockTags.PICKAXE_MINEABLE, settings);
     }
 
-    @Override
-    public boolean postMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
-        if (!world.isClient && miner instanceof PlayerEntity player) {
-            breakBlocksInPlane(world, pos, player);
-        }
-        return super.postMine(stack, world, state, pos, miner);
-    }
+    public static List<BlockPos> getBlocksToBeDestroyed(int range, BlockPos initalBlockPos, ServerPlayerEntity player) {
+        List<BlockPos> positions = new ArrayList<>();
+        HitResult hit = player.raycast(20, 0, false);
+        if (hit.getType() == HitResult.Type.BLOCK) {
+            BlockHitResult blockHit = (BlockHitResult) hit;
 
-    private void breakBlocksInPlane(World world, BlockPos pos, PlayerEntity player) {
-        // Determine the player's pitch and yaw to decide the plane
-        float pitch = player.getPitch();
-        float yaw = player.getYaw();
-
-        // Check if the player is looking vertically (pitch close to ±90)
-        if (Math.abs(pitch) > 45) {
-            // Player is looking up or down, break a horizontal 3x3 plane
-            for (int x = -1; x <= 1; x++) {
-                for (int z = -1; z <= 1; z++) {
-                    BlockPos targetPos = pos.add(x, 0, z);
-                    breakBlockIfPossible(world, targetPos, player);
-                }
-            }
-        } else {
-            // Player is looking horizontally, break a vertical 3x3 plane
-            Direction direction = player.getHorizontalFacing();
-            if (direction == Direction.NORTH || direction == Direction.SOUTH) {
-                // North or South facing, break vertically along Z
-                for (int x = -1; x <= 1; x++) {
-                    for (int y = -1; y <= 1; y++) {
-                        BlockPos targetPos = pos.add(x, y, 0);
-                        breakBlockIfPossible(world, targetPos, player);
-                    }
-                }
-            } else {
-                // East or West facing, break vertically along X
-                for (int z = -1; z <= 1; z++) {
-                    for (int y = -1; y <= 1; y++) {
-                        BlockPos targetPos = pos.add(0, y, z);
-                        breakBlockIfPossible(world, targetPos, player);
+            if(blockHit.getSide() == Direction.DOWN || blockHit.getSide() == Direction.UP) {
+                for(int x = -range; x <= range; x++) {
+                    for(int y = -range; y <= range; y++) {
+                        positions.add(new BlockPos(initalBlockPos.getX() + x, initalBlockPos.getY(), initalBlockPos.getZ() + y));
                     }
                 }
             }
+
+            if(blockHit.getSide() == Direction.NORTH || blockHit.getSide() == Direction.SOUTH) {
+                for(int x = -range; x <= range; x++) {
+                    for(int y = -range; y <= range; y++) {
+                        positions.add(new BlockPos(initalBlockPos.getX() + x, initalBlockPos.getY() + y, initalBlockPos.getZ()));
+                    }
+                }
+            }
+
+            if(blockHit.getSide() == Direction.EAST || blockHit.getSide() == Direction.WEST) {
+                for(int x = -range; x <= range; x++) {
+                    for(int y = -range; y <= range; y++) {
+                        positions.add(new BlockPos(initalBlockPos.getX(), initalBlockPos.getY() + y, initalBlockPos.getZ() + x));
+                    }
+                }
+            }
         }
-    }
 
-    private void breakBlockIfPossible(World world, BlockPos pos, PlayerEntity player) {
-        BlockState blockState = world.getBlockState(pos);
-        // Check if the block can be broken
-        if (canBreak(blockState, world, pos, player)) {
-            world.breakBlock(pos, true, player);
-        }
+        return positions;
     }
-
-    private boolean canBreak(BlockState state, World world, BlockPos pos, LivingEntity miner) {
-        // Check if the block can be broken
-        return state.getHardness(world, pos) >= 0;
-    }
-
-    @Override
-    public boolean isEnchantable(ItemStack stack) {
-        return true; // Allow enchantments
-    }
-
 }

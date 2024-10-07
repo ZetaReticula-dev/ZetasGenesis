@@ -1,0 +1,8 @@
+{
+  "values": [
+    "minecraft:magma_block",
+    "minecraft:lava_cauldron",
+    "zetasgenesis:stove",
+    "#zetasgenesis:tray_heat_sources"
+  ]
+}

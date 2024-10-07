@@ -61,6 +61,8 @@ public class StoveBlock extends BlockWithEntity {
     @Override
     protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit)
     { Item heldItem = stack.getItem();
+
+
         if (world.getBlockEntity(pos) instanceof StoveBlockEntity stoveBlockEntity) {
             ItemStack itemStack = player.getStackInHand(hand);
             Optional<RecipeEntry<CampfireCookingRecipe>> optional = stoveBlockEntity.getRecipeFor(itemStack);

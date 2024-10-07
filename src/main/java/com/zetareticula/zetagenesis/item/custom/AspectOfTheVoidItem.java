@@ -16,18 +16,30 @@ import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
 
 public class AspectOfTheVoidItem extends Item {
-    private static final int COOLDOWN_TICKS = 200;  // 10 seconds cooldown (20 ticks = 1 second)
+    private final int cooldownTick;  // 10 seconds cooldown (20 ticks = 1 second)
+    private final int instantRange;
+    private final int teleportationRange;
+    private final int fallDamage;
+    private final int useDamage;
+    private final int instantDamage;
 
 
-    public AspectOfTheVoidItem(Settings settings) {
+    public AspectOfTheVoidItem(Settings settings, int instantRange, int teleportationRange, int fallDamage, int useDamage, int instantDamage, int cooldownTick) {
         super(settings);
+        this.instantRange = instantRange;
+        this.teleportationRange = teleportationRange;
+        this.fallDamage = fallDamage;
+        this.useDamage = useDamage;
+        this.instantDamage = instantDamage;
+        this.cooldownTick = cooldownTick;
+
 
     }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
         ItemStack itemStack = player.getStackInHand(hand);
-        player.getStackInHand(hand).damage(1,player, EquipmentSlot.MAINHAND);
+        player.getStackInHand(hand).damage(this.useDamage,player, EquipmentSlot.MAINHAND);
         // Check if item is on cooldown
         if (player.getItemCooldownManager().isCoolingDown(this)) {
             return TypedActionResult.fail(itemStack);  // Prevent item usage if on cooldown
@@ -35,7 +47,7 @@ public class AspectOfTheVoidItem extends Item {
 
         if (!world.isClient) {  // Only execute on the server side
             // Determine raycast distance
-            double maxDistance = player.isSneaking() ? 40.0D : 12.0D;
+            double maxDistance = player.isSneaking() ? this.instantRange : this.teleportationRange;
 
             // Get player's look vector and start position
             Vec3d lookVec = player.getRotationVec(1.0F);
@@ -44,10 +56,10 @@ public class AspectOfTheVoidItem extends Item {
 
             // Play different sounds based on whether the player is sneaking
             if (player.isSneaking()) {
-                player.getStackInHand(hand).damage(3,player, EquipmentSlot.MAINHAND);
+                player.getStackInHand(hand).damage(this.instantDamage,player, EquipmentSlot.MAINHAND);
                 world.playSound(null, player.getX(), player.getY(), player.getZ(), GenesisSounds.INSTANT_TRANSMISSION, SoundCategory.BLOCKS, 10.0F, 1.0F);
                 // Apply cooldown when sneaking
-                player.getItemCooldownManager().set(this, COOLDOWN_TICKS);
+                player.getItemCooldownManager().set(this, this.cooldownTick);
             } else {
                 world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ENTITY_ENDERMAN_TELEPORT, SoundCategory.BLOCKS, 10.0F, 1.0F);
             }
@@ -75,6 +87,7 @@ public class AspectOfTheVoidItem extends Item {
                 // If no block is hit, teleport forward
                 player.requestTeleport(endPos.getX(), endPos.getY(), endPos.getZ());
             }
+            player.fallDistance = this.fallDamage;
         }
 
         return TypedActionResult.success(itemStack);  // Return the item stack used

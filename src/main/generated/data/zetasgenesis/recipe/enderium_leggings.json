@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "b": {
+      "item": "zetasgenesis:enderium_ingot"
+    }
+  },
+  "pattern": [
+    "bbb",
+    "b b",
+    "b b"
+  ],
+  "result": {
+    "count": 1,
+    "id": "zetasgenesis:enderium_leggings"
+  }
+}

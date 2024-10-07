@@ -145,7 +145,7 @@ public class VariantCraftingScreenHandler extends AbstractRecipeScreenHandler<Cr
                 canUse(this.context, player, GenesisBlocks.BIRCH_CRAFTING_TABLE) || canUse(this.context, player, GenesisBlocks.CHERRY_CRAFTING_TABLE) ||
                 canUse(this.context, player, GenesisBlocks.CRIMSON_CRAFTING_TABLE) || canUse(this.context, player, GenesisBlocks.DARK_OAK_CRAFTING_TABLE) ||
                 canUse(this.context, player, GenesisBlocks.JUNGLE_CRAFTING_TABLE) || canUse(this.context, player, GenesisBlocks.MANGROVE_CRAFTING_TABLE) ||
-                canUse(this.context, player, GenesisBlocks.SPRUCE_CRAFTING_TABLE) || canUse(this.context, player, GenesisBlocks.WARPED_CRAFTING_TABLE);
+                canUse(this.context, player, GenesisBlocks.SPRUCE_CRAFTING_TABLE) || canUse(this.context, player, GenesisBlocks.WARPED_CRAFTING_TABLE) || canUse(this.context, player, GenesisBlocks.OAK_CRAFTING_TABLE);
     }
 
     @Override

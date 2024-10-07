@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "zetasgenesis:oak_crafting_table",
+    "zetasgenesis:acacia_crafting_table",
+    "zetasgenesis:bamboo_crafting_table",
+    "zetasgenesis:birch_crafting_table",
+    "zetasgenesis:cherry_crafting_table",
+    "zetasgenesis:crimson_crafting_table",
+    "zetasgenesis:dark_oak_crafting_table",
+    "zetasgenesis:jungle_crafting_table",
+    "zetasgenesis:mangrove_crafting_table",
+    "zetasgenesis:spruce_crafting_table",
+    "zetasgenesis:warped_crafting_table"
+  ]
+}

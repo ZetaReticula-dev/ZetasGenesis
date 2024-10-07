@@ -12,8 +12,10 @@ import net.minecraft.registry.tag.TagKey;
 import java.util.function.Supplier;
 
 public enum GenesisToolMaterials implements ToolMaterial{
-    ENDERIUM(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 3000,10.0F,5.0F,25,
+    ENDERIUM(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 3000,12.0F,5.0F,25,
             () -> Ingredient.ofItems(GenesisItems.ENDERIUM_INGOT)),
+
+
     IRON_HAMMER(BlockTags.INCORRECT_FOR_IRON_TOOL, 400,4.0F,4.0F,14,
             () -> Ingredient.ofItems(Items.IRON_BLOCK)),
     DIAMOND_HAMMER(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 800,6.0F,5.0F,10,

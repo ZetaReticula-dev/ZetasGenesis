@@ -5,9 +5,11 @@ import com.zetareticula.zetagenesis.equipment.GenesisArmor;
 import com.zetareticula.zetagenesis.equipment.GenesisToolMaterials;
 import com.zetareticula.zetagenesis.equipment.KnifeItem;
 import com.zetareticula.zetagenesis.food.GenesisFood;
-import com.zetareticula.zetagenesis.food.custom.GodPotion;
+import com.zetareticula.zetagenesis.food.custom.CanItem;
+import com.zetareticula.zetagenesis.food.custom.DrinkableItem;
 import com.zetareticula.zetagenesis.food.custom.ReaperPepperItem;
 import com.zetareticula.zetagenesis.item.custom.*;
+import com.zetareticula.zetagenesis.sounds.GenesisJukeboxSongs;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -17,10 +19,10 @@ import net.minecraft.util.Rarity;
 public class GenesisItems {
 
     public static final Item GOD_POTION = registerItem("god_potion",
-            new GodPotion(new Item.Settings().food(GenesisFood.GOD_POTION).maxCount(1)));
+            new DrinkableItem(new Item.Settings().food(GenesisFood.GOD_POTION).maxCount(1)));
 
     public static final Item DITTO_ITEM = registerItem("ditto_item",
-            new ArmorItem(GenesisArmor.DOMINUS, ArmorItem.Type.HELMET, new Item.Settings().maxCount(99)));
+            new ShieldItem(new Item.Settings().maxCount(1)));
 
     public static final Item CINNAMON_ROLL = registerItem("cinnamon_roll",
             new Item(new Item.Settings().food(GenesisFood.CINNAMON_ROLL).maxCount(64).rarity(Rarity.UNCOMMON)));
@@ -62,16 +64,16 @@ public class GenesisItems {
             new Item(new Item.Settings()));
 
     public static final Item AOTE = registerItem("aspect_of_the_end",
-            new AspectOfTheEndItem(new Item.Settings().maxDamage(32).maxCount(1)));
+            new AspectOfTheEndItem(new Item.Settings().maxDamage(32).maxCount(1), 8, 0, 1));
 
     public static final Item WARPED_AOTE = registerItem("warped_aspect_of_the_end",
-            new WarpedAspectOfTheEndItem(new Item.Settings().rarity(Rarity.UNCOMMON).maxDamage(64).maxCount(1)));
+            new AspectOfTheEndItem(new Item.Settings().rarity(Rarity.UNCOMMON).maxDamage(64).maxCount(1),10, -20, 1));
 
     public static final Item AOTV = registerItem("aspect_of_the_void",
-            new AspectOfTheVoidItem(new Item.Settings().rarity(Rarity.UNCOMMON).maxDamage(64).maxCount(1)));
+            new AspectOfTheVoidItem(new Item.Settings().rarity(Rarity.UNCOMMON).maxDamage(64).maxCount(1),40, 12, 0, 1, 7, 240 ));
 
     public static final Item WARPED_AOTV = registerItem("warped_aspect_of_the_void",
-            new WarpedAspectOfTheVoidItem(new Item.Settings().rarity(Rarity.RARE).maxDamage(128).maxCount(1)));
+            new AspectOfTheVoidItem(new Item.Settings().rarity(Rarity.RARE).maxDamage(128).maxCount(1), 60, 14, -1000, 1, 3, 160 ));
         //DIVAN STUFF
     public static final Item DIVAN_HELMET = registerItem("divan_helmet",
             new ArmorItem(GenesisArmor.DIVAN, ArmorItem.Type.HELMET, new Item.Settings().fireproof().maxDamage
@@ -109,6 +111,28 @@ public class GenesisItems {
             new SwordItem(GenesisToolMaterials.ENDERIUM, (new Item.Settings()).fireproof().attributeModifiers(SwordItem.createAttributeModifiers
                     (GenesisToolMaterials.ENDERIUM, 3, -2.4F))));
 
+    public static final Item ENDERIUM_SHOVEL = registerItem("enderium_shovel",
+            new ShovelItem(GenesisToolMaterials.ENDERIUM, (new Item.Settings()).fireproof().attributeModifiers(ShovelItem.createAttributeModifiers
+                    (GenesisToolMaterials.ENDERIUM, 1.5F, -3.0F))));
+
+    public static final Item ENDERIUM_PICKAXE = registerItem("enderium_pickaxe",
+            new PickaxeItem(GenesisToolMaterials.ENDERIUM, (new Item.Settings()).fireproof().attributeModifiers(PickaxeItem.createAttributeModifiers
+                    (GenesisToolMaterials.ENDERIUM, 1.0F, -2.8F))));
+
+    public static final Item ENDERIUM_AXE = registerItem("enderium_axe",
+            new AxeItem(GenesisToolMaterials.ENDERIUM, (new Item.Settings()).fireproof().attributeModifiers(AxeItem.createAttributeModifiers
+                    (GenesisToolMaterials.ENDERIUM, 5, -3.0F))));
+
+    public static final Item ENDERIUM_HOE = registerItem("enderium_hoe",
+            new HoeItem(GenesisToolMaterials.ENDERIUM, (new Item.Settings()).fireproof().attributeModifiers(HoeItem.createAttributeModifiers
+                    (GenesisToolMaterials.ENDERIUM, -4.0F, -0.0F))));
+
+    public static final Item MULTI_TOOL = registerItem("multi_tool",
+            new MulitoolItem(ToolMaterials.IRON, (new Item.Settings()).fireproof().attributeModifiers(MulitoolItem.createAttributeModifiers
+                    (ToolMaterials.IRON, 1.0F, 0.0F))));
+
+
+
     public static final Item ENDERIUM_INGOT = registerItem("enderium_ingot",
             new Item(new Item.Settings().rarity(Rarity.RARE).fireproof()));
 
@@ -135,6 +159,9 @@ public class GenesisItems {
         //MISCELLANEOUS
     public static final Item ANGEL_RING = registerItem("angel_ring",
             new AngelRing(new Item.Settings().maxCount(1)));
+
+    public static final Item DOOM_DISC = registerItem("doom_disc",
+            new Item(new Item.Settings().maxCount(1).jukeboxPlayable(GenesisJukeboxSongs.DOOM)) );
 
     public static final Item ICE_CREAM_SUNRISE = registerItem("triple_gooberberry_sunrise",
             new Item(new Item.Settings().food(GenesisFood.TRIPLE_GOOBER_BERRY_SUNRISE)));
@@ -205,6 +232,95 @@ public class GenesisItems {
     public static final Item GOLDEN_KNIFE = registerItem("golden_knife",
             new KnifeItem(GenesisToolMaterials.KNIFE_GOLD, (new Item.Settings()).attributeModifiers(KnifeItem.createAttributeModifiers
                     (GenesisToolMaterials.KNIFE_GOLD, 1, -2.0F))));
+
+    //Raw food crops
+    public static final Item CABBAGE = registerItem("cabbage",
+            new Item(new Item.Settings().food(GenesisFood.CABBAGE)));
+
+    public static final Item TOMATO = registerItem("tomato",
+            new Item(new Item.Settings().food(GenesisFood.TOMATO)));
+
+    public static final Item ONION = registerItem("onion",
+            new Item(new Item.Settings().food(GenesisFood.ONION)));
+
+    //Basic foods
+
+    public static final Item FRIED_EGG = registerItem("fried_egg",
+            new Item(new Item.Settings().food(GenesisFood.FRIED_EGG)));
+
+    public static final Item TOMATO_SAUCE = registerItem("tomato_sauce",
+            new Item(new Item.Settings().food(GenesisFood.TOMATO_SAUCE)));
+
+    public static final Item WHEAT_DOUGH = registerItem("wheat_dough",
+            new Item(new Item.Settings().food(GenesisFood.WHEAT_DOUGH)));
+
+    public static final Item RAW_PASTA = registerItem("raw_pasta",
+            new Item(new Item.Settings().food(GenesisFood.RAW_PASTA)));
+
+    public static final Item PUMPKIN_SLICE = registerItem("pumpkin_slice",
+            new Item(new Item.Settings().food(GenesisFood.PUMPKIN_SLICE)));
+
+    public static final Item CABBAGE_LEAF = registerItem("cabbage_leaf",
+            new Item(new Item.Settings().food(GenesisFood.CABBAGE_LEAF)));
+
+    public static final Item MINCED_BEEF = registerItem("minced_beef",
+            new Item(new Item.Settings().food(GenesisFood.MINCED_BEEF)));
+
+    public static final Item BEEF_PATTY = registerItem("beff_patty",
+            new Item(new Item.Settings().food(GenesisFood.BEEF_PATTY)));
+
+    public static final Item CHICKEN_CUTS = registerItem("chicken_cuts",
+            new Item(new Item.Settings().food(GenesisFood.CHICKEN_CUTS)));
+
+    public static final Item COOKED_CHICKEN_CUTS = registerItem("ccoked_chicken_cuts",
+            new Item(new Item.Settings().food(GenesisFood.COOKED_CHICKEN_CUTS)));
+
+    public static final Item BACON = registerItem("bacon",
+            new Item(new Item.Settings().food(GenesisFood.BACON)));
+
+    public static final Item COOKED_BACON = registerItem("cooked_bacon",
+            new Item(new Item.Settings().food(GenesisFood.COOKED_BACON)));
+
+    public static final Item COD_SLICE = registerItem("cod_slice",
+            new Item(new Item.Settings().food(GenesisFood.COD_SLICE)));
+
+    public static final Item COOKED_COD_SLICE = registerItem("cooked_cod_slice",
+            new Item(new Item.Settings().food(GenesisFood.COOKED_COD_SLICE)));
+
+    public static final Item SALMON_SLICE = registerItem("salmon_slice",
+            new Item(new Item.Settings().food(GenesisFood.SALMON_SLICE)));
+
+    public static final Item COOKED_SALMON_SLICE = registerItem("cooked_salmon_slice",
+            new Item(new Item.Settings().food(GenesisFood.COOKED_SALMON_SLICE)));
+
+    public static final Item MUTTON_CHOPS = registerItem("mutton_chops",
+            new Item(new Item.Settings().food(GenesisFood.MUTTON_CHOPS)));
+
+    public static final Item COOKED_MUTTON_CHOPS = registerItem("cooked_mutton_chops",
+            new Item(new Item.Settings().food(GenesisFood.COOKED_MUTTON_CHOPS)));
+
+    public static final Item HAM = registerItem("ham",
+            new Item(new Item.Settings().food(GenesisFood.HAM)));
+
+    public static final Item SMOKED_HAM = registerItem("smoked_ham",
+            new Item(new Item.Settings().food(GenesisFood.SMOKED_HAM)));
+
+
+
+    //Sweets
+
+    public static final Item PIE_CRUST = registerItem("pie_crust",
+            new Item(new Item.Settings().food(GenesisFood.PIE_CRUST)));
+
+    //Soup
+    public static final Item OPEN_SATURATION_SOUP = registerItem("open_saturation_soup_can",
+            new DrinkableItem(new Item.Settings().maxCount(4).food(GenesisFood.SATURATION_SOUP)));
+
+    public static final Item SOUP_CAN = registerItem("soup_can",
+            new Item(new Item.Settings().maxCount(16)));
+
+    public static final Item SATURATION_SOUP_CAN = registerItem("saturation_soup_can",
+            new CanItem(new Item.Settings().maxCount(16), OPEN_SATURATION_SOUP));
 
 
     private static Item registerItem(String name, Item item) {

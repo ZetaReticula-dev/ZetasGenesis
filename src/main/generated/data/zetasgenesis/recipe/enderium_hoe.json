@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "e": {
+      "item": "zetasgenesis:enderium_ingot"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "ee",
+    " s",
+    " s"
+  ],
+  "result": {
+    "count": 1,
+    "id": "zetasgenesis:enderium_hoe"
+  }
+}

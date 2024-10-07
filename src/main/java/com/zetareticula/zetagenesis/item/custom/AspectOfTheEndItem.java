@@ -1,6 +1,5 @@
 package com.zetareticula.zetagenesis.item.custom;
 
-import com.zetareticula.zetagenesis.sounds.GenesisSounds;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -16,19 +15,25 @@ import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
 
 public class AspectOfTheEndItem extends Item {
+    private final int teleportationRange;
+    private final int fallDamage;
+    private final int useDamage;
 
-    public AspectOfTheEndItem(Settings settings) {
+    public AspectOfTheEndItem(Settings settings, int teleportationRange, int fallDamage, int useDamage) {
         super(settings);
+        this.teleportationRange = teleportationRange;
+        this.fallDamage = fallDamage;
+        this.useDamage = useDamage;
     }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
         ItemStack itemStack = player.getStackInHand(hand);
-        player.getStackInHand(hand).damage(1, player, EquipmentSlot.MAINHAND);
+        player.getStackInHand(hand).damage(this.useDamage, player, EquipmentSlot.MAINHAND);
 
         if (!world.isClient) {  // Only execute on the server side
             // Set a fixed raycast distance (no sneaking condition)
-            double maxDistance = 8.0D;
+            double maxDistance = 10.0D;
 
             // Get player's look vector and start position
             Vec3d lookVec = player.getRotationVec(1.0F);
@@ -61,6 +66,7 @@ public class AspectOfTheEndItem extends Item {
                 // If no block is hit, teleport forward
                 player.requestTeleport(endPos.getX(), endPos.getY(), endPos.getZ());
             }
+            player.fallDistance = this.fallDamage;
         }
 
         return TypedActionResult.success(itemStack);  // Return the item stack used

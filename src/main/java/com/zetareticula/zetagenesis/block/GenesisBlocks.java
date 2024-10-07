@@ -3,7 +3,9 @@ package com.zetareticula.zetagenesis.block;
 import com.zetareticula.zetagenesis.ZetaGenesis;
 import com.zetareticula.zetagenesis.block.custom.*;
 import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.enums.NoteBlockInstrument;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -163,6 +165,9 @@ public class GenesisBlocks {
     public static final Block STOVE = registerBlock("stove",
             new StoveBlock(AbstractBlock.Settings.copy(BRICKS).luminance(createLightLevelFromLitBlockState(15)).nonOpaque()));
 
+    public static final Block SKILLET = registerBlock("skillet",
+            new SkilletBlock(AbstractBlock.Settings.create().strength(0.5F, 6.0F).sounds(BlockSoundGroup.LANTERN).nonOpaque()));
+
     public static final Block BASKET = registerBlock("basket",
             new BasketBlock(AbstractBlock.Settings.copy(BAMBOO_PLANKS).nonOpaque()));
 
@@ -203,6 +208,9 @@ public class GenesisBlocks {
 
     //CRAFTING TABLES
 
+    public static final Block OAK_CRAFTING_TABLE = registerBlock("oak_crafting_table",
+            new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
+
     public static final Block ACACIA_CRAFTING_TABLE = registerBlock("acacia_crafting_table",
             new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
 
@@ -232,6 +240,10 @@ public class GenesisBlocks {
 
     public static final Block WARPED_CRAFTING_TABLE = registerBlock("warped_crafting_table",
             new VariantCraftingTable(AbstractBlock.Settings.copy(CRAFTING_TABLE).sounds(BlockSoundGroup.NETHER_WOOD)));
+
+    public static final Block OAK_CHEST = registerBlock("oak_chest",
+            new VariantChestBlock(AbstractBlock.Settings.copy(CRAFTING_TABLE).sounds(BlockSoundGroup.NETHER_WOOD)));
+
 
 
 

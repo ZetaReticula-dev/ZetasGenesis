@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:iron_sword"
+    },
+    "I": {
+      "item": "minecraft:iron_pickaxe"
+    },
+    "M": {
+      "item": "minecraft:iron_hoe"
+    },
+    "N": {
+      "item": "minecraft:iron_axe"
+    },
+    "Z": {
+      "item": "minecraft:iron_shovel"
+    },
+    "c": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "pattern": [
+    "#IM",
+    "ccZ",
+    "Ncc"
+  ],
+  "result": {
+    "count": 1,
+    "id": "zetasgenesis:multi_tool"
+  }
+}

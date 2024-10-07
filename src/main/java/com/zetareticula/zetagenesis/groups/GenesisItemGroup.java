@@ -45,6 +45,10 @@ public class GenesisItemGroup {
                         entries.add(GenesisItems.ENDERIUM_LEGGINGS);
                         entries.add(GenesisItems.ENDERIUM_BOOTS);
                         entries.add(GenesisItems.ENDERIUM_SWORD);
+                        entries.add(GenesisItems.ENDERIUM_SHOVEL);
+                        entries.add(GenesisItems.ENDERIUM_PICKAXE);
+                        entries.add(GenesisItems.ENDERIUM_AXE);
+                        entries.add(GenesisItems.ENDERIUM_HOE);
                         entries.add(GenesisItems.ENDERIUM_INGOT);
                         entries.add(GenesisItems.ENDERIUM_UPGRADE);
                         entries.add(GenesisItems.URANIUM_FUEL_ROD);

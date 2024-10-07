@@ -22,6 +22,9 @@ public class GenesisScreenHandlerType {
     public static final ScreenHandlerType<CabinetBlockScreenHandler> CABINET_BLOCK_SCREEN =
             register("cabinet_block_screen", CabinetBlockScreenHandler::new, BlockPosPayload.PACKET_CODEC);
 
+    public static final ScreenHandlerType<VariantChestBlockScreenHandler> VARIANT_CHEST_BLOCK_SCREEN =
+            register("variant_chest_block_screen", VariantChestBlockScreenHandler::new, BlockPosPayload.PACKET_CODEC);
+
     public static <T extends ScreenHandler, D extends CustomPayload> ExtendedScreenHandlerType<T, D>
         register(String name, ExtendedScreenHandlerType.ExtendedFactory<T, D> factory,
                  PacketCodec<? super RegistryByteBuf, D> codec) {

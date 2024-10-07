@@ -50,6 +50,7 @@ public class GenesisBlockGroup {
                         entries.add(GenesisBlocks.CRACKED_SMOOTH_AMETHYST_BRICKS);
 
                         //CRAFTING TABLES
+                        entries.add(GenesisBlocks.OAK_CRAFTING_TABLE);
                         entries.add(GenesisBlocks.ACACIA_CRAFTING_TABLE);
                         entries.add(GenesisBlocks.BAMBOO_CRAFTING_TABLE);
                         entries.add(GenesisBlocks.BIRCH_CRAFTING_TABLE);

@@ -15,6 +15,7 @@ import com.zetareticula.zetagenesis.utils.PlayerDeathEvent;
 import com.zetareticula.zetagenesis.groups.GenesisItemGroup;
 import com.zetareticula.zetagenesis.item.GenesisItems;
 import com.zetareticula.zetagenesis.equipment.GenesisArmor;
+import com.zetareticula.zetagenesis.worldgen.GenesisBiomeModification;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -47,6 +48,9 @@ public class ZetaGenesis implements ModInitializer {
 		GenesisFoodGroup.registerGenesisFoodGroup();
 		PlayerDeathEvent.registerPlayerDeathEvent();
 		GenesisEnchantments.load();
+
+		GenesisBiomeModification.load();
+
 		FuelRegistry.INSTANCE.add(GenesisItems.URANIUM_FUEL_ROD, 32767);
 
 		ItemStorage.SIDED.registerForBlockEntity(BasketBlockEntity::getInventoryProvider, GenesisBlockEntity.BASKET_BLOCK_ENTITY);
