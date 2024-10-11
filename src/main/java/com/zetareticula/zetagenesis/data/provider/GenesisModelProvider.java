@@ -110,6 +110,7 @@ public class GenesisModelProvider extends FabricModelProvider {
         itemModelGenerator.register(GenesisItems.ENERGY_LEGGINGS, Models.GENERATED);
         itemModelGenerator.register(GenesisItems.ENERGY_GREAVES, Models.GENERATED);
         itemModelGenerator.register(GenesisItems.ANGEL_RING, Models.GENERATED);
+        itemModelGenerator.register(GenesisItems.TELEPORTATION_RING, Models.GENERATED);
         itemModelGenerator.register(GenesisItems.ICE_CREAM_SUNRISE, Models.GENERATED);
         itemModelGenerator.register(GenesisItems.KRABBY_PATTY, Models.GENERATED);
         itemModelGenerator.register(GenesisItems.IRON_HAMMER, Models.HANDHELD);
@@ -125,6 +126,7 @@ public class GenesisModelProvider extends FabricModelProvider {
         itemModelGenerator.register(GenesisItems.NETHERITE_KNIFE, Models.HANDHELD);
         itemModelGenerator.register(GenesisItems.GOLDEN_KNIFE, Models.HANDHELD);
         itemModelGenerator.register(GenesisItems.MULTI_TOOL, Models.GENERATED);
+        itemModelGenerator.register(GenesisItems.WAND, Models.HANDHELD);
 
 
         itemModelGenerator.register(GenesisItems.SOUP_CAN, Models.GENERATED);

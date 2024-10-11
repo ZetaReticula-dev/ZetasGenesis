@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "amethyst",
+  "ingredient": {
+    "item": "zetasgenesis:amethyst_bricks"
+  },
+  "result": {
+    "id": "zetasgenesis:cracked_amethyst_bricks"
+  }
+}

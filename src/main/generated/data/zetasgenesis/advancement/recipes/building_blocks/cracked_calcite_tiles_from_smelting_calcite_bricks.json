@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_calcite_brick_stairs": {
+    "has_calcite_bricks": {
       "conditions": {
         "items": [
           {
-            "items": "zetasgenesis:calcite_brick_stairs"
+            "items": "zetasgenesis:calcite_bricks"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:calcite_brick_slab_from_smelting_calcite_brick_stairs"
+        "recipe": "minecraft:cracked_calcite_tiles_from_smelting_calcite_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_calcite_brick_stairs"
+      "has_calcite_bricks"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:calcite_brick_slab_from_smelting_calcite_brick_stairs"
+      "minecraft:cracked_calcite_tiles_from_smelting_calcite_bricks"
     ]
   }
 }

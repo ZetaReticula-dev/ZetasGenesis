@@ -9,6 +9,7 @@ import com.zetareticula.zetagenesis.component.GenesisComponents;
 import com.zetareticula.zetagenesis.enchantment.GenesisEnchantments;
 import com.zetareticula.zetagenesis.equipment.GenesisToolMaterials;
 import com.zetareticula.zetagenesis.groups.GenesisFoodGroup;
+import com.zetareticula.zetagenesis.item.custom.PortalGunItem;
 import com.zetareticula.zetagenesis.screenhandler.GenesisScreenHandlerType;
 import com.zetareticula.zetagenesis.sounds.GenesisSounds;
 import com.zetareticula.zetagenesis.utils.PlayerDeathEvent;
@@ -18,6 +19,7 @@ import com.zetareticula.zetagenesis.equipment.GenesisArmor;
 import com.zetareticula.zetagenesis.worldgen.GenesisBiomeModification;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.transfer.v1.item.ItemStorage;
 import net.minecraft.util.Identifier;
@@ -48,6 +50,11 @@ public class ZetaGenesis implements ModInitializer {
 		GenesisFoodGroup.registerGenesisFoodGroup();
 		PlayerDeathEvent.registerPlayerDeathEvent();
 		GenesisEnchantments.load();
+
+		// Register the /setcoords command
+		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
+			PortalGunItem.registerCommands(dispatcher);
+		});
 
 		GenesisBiomeModification.load();
 

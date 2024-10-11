@@ -3,11 +3,11 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "group": "calcite",
+  "group": "amethyst",
   "ingredient": {
-    "item": "zetasgenesis:calcite_brick_stairs"
+    "item": "zetasgenesis:smooth_amethyst_bricks"
   },
   "result": {
-    "id": "zetasgenesis:calcite_brick_slab"
+    "id": "zetasgenesis:cracked_smooth_amethyst_bricks"
   }
 }

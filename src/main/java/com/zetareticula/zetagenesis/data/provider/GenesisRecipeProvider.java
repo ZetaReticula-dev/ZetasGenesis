@@ -94,13 +94,19 @@ public class GenesisRecipeProvider extends FabricRecipeProvider {
                 .pattern("Ncc").input('#', Items.IRON_SWORD).input('I', Items.IRON_PICKAXE).input('M', Items.IRON_HOE).input('c', Items.COPPER_INGOT)
                 .input('Z', Items.IRON_SHOVEL).input('N', Items.IRON_AXE)  .criterion(hasItem(Items.IRON_SWORD), conditionsFromItem(Items.IRON_SWORD)).offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, GenesisItems.WAND)
+                .pattern("  #")
+                .pattern(" L ")
+                .pattern("W  ").input('#', Items.AMETHYST_SHARD).input('L', Items.LAPIS_LAZULI).input('W', Items.WOODEN_SWORD)
+                .criterion(hasItem(Items.LAPIS_LAZULI), conditionsFromItem(Items.LAPIS_LAZULI)).offerTo(exporter);
+
 
         offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.CALCITE_BRICKS, GenesisBlocks.POLISHED_CALCITE);
         offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.CALCITE_TILES, GenesisBlocks.CALCITE_BRICKS);
         offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.CHISELED_CALCITE_BRICKS, GenesisBlocks.CALCITE_BRICK_SLAB);
-        List<ItemConvertible> CALCITE_BRICKS = List.of(GenesisBlocks.CALCITE_BRICK_STAIRS);
-        offerSmelting(exporter, CALCITE_BRICKS, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.CALCITE_BRICK_SLAB, 0.1F, 200, "calcite");
-        List<ItemConvertible> CALCITE_TILES = List.of(GenesisBlocks.CRACKED_CALCITE_TILES);
+        List<ItemConvertible> CALCITE_BRICKS = List.of(GenesisBlocks.CALCITE_BRICKS);
+        offerSmelting(exporter, CALCITE_BRICKS, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.CRACKED_CALCITE_BRICKS, 0.1F, 200, "calcite");
+        List<ItemConvertible> CALCITE_TILES = List.of(GenesisBlocks.CALCITE_TILES);
         offerSmelting(exporter, CALCITE_BRICKS, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.CRACKED_CALCITE_TILES, 0.1F, 200, "calcite");
         offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.POLISHED_CALCITE, Blocks.CALCITE);
         offerStairRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.CALCITE_STAIRS, Blocks.CALCITE);
@@ -111,6 +117,24 @@ public class GenesisRecipeProvider extends FabricRecipeProvider {
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.CALCITE_BRICK_SLAB, GenesisBlocks.CALCITE_BRICKS);
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.CALCITE_TILE_SLAB, GenesisBlocks.CALCITE_TILES);
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.POLISHED_CALCITE_SLAB, GenesisBlocks.POLISHED_CALCITE);
+
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.AMETHYST_BRICKS, GenesisBlocks.POLISHED_AMETHYST);
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.AMETHYST_TILES, GenesisBlocks.AMETHYST_BRICKS);
+        List<ItemConvertible> AMETHYST_BRICKS = List.of(GenesisBlocks.AMETHYST_BRICKS);
+        offerSmelting(exporter, AMETHYST_BRICKS, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.CRACKED_AMETHYST_BRICKS, 0.1F, 200, "amethyst");
+        List<ItemConvertible> AMETHYST_TILES = List.of(GenesisBlocks.AMETHYST_TILES);
+        offerSmelting(exporter, AMETHYST_TILES, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.CRACKED_CALCITE_TILES, 0.1F, 200, "amethyst");
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.POLISHED_AMETHYST, Blocks.AMETHYST_BLOCK);
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.SMOOTH_AMETHYST_BRICKS, GenesisBlocks.CALCITE_TILES);
+        List<ItemConvertible> SMOOTH_AMETHYST = List.of(GenesisBlocks.SMOOTH_AMETHYST_BRICKS);
+        offerSmelting(exporter, SMOOTH_AMETHYST, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.CRACKED_SMOOTH_AMETHYST_BRICKS, 0.1F, 200, "amethyst");
+        offerStairRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.AMETHYST_STAIRS, Blocks.AMETHYST_BLOCK);
+        offerStairRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.AMETHYST_BRICK_STAIRS, GenesisBlocks.AMETHYST_BRICKS);
+        offerStairRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.AMETHYST_TILE_STAIRS, GenesisBlocks.AMETHYST_TILES);
+        offerStairRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.POLISHED_AMETHYST_STAIRS, GenesisBlocks.POLISHED_AMETHYST);
+        offerStairRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.SMOOTH_AMETHYST_BRICK_STAIRS, GenesisBlocks.SMOOTH_AMETHYST_BRICKS
+        );
+
 
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.CALCITE_SLAB, Blocks.CALCITE );
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, GenesisBlocks.CALCITE_STAIRS, Blocks.CALCITE );

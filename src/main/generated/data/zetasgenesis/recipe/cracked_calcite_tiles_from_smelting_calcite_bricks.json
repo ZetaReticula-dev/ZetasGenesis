@@ -5,7 +5,7 @@
   "experience": 0.1,
   "group": "calcite",
   "ingredient": {
-    "item": "zetasgenesis:calcite_brick_stairs"
+    "item": "zetasgenesis:calcite_bricks"
   },
   "result": {
     "id": "zetasgenesis:cracked_calcite_tiles"

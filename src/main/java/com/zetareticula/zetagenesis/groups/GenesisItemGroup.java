@@ -28,6 +28,7 @@ public class GenesisItemGroup {
                         entries.add(GenesisItems.INSTANT_TRANSMISSION_MERGER);
                         entries.add(GenesisItems.TUNING_FORK);
                         entries.add(GenesisItems.ANGEL_RING);
+                        entries.add(GenesisItems.TELEPORTATION_RING);
                         entries.add(GenesisItems.DIVAN_HELMET);
                         entries.add(GenesisItems.DIVAN_CHESTPLATE);
                         entries.add(GenesisItems.DIVAN_LEGGINGS);

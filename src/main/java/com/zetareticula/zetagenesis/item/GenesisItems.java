@@ -22,7 +22,10 @@ public class GenesisItems {
             new DrinkableItem(new Item.Settings().food(GenesisFood.GOD_POTION).maxCount(1)));
 
     public static final Item DITTO_ITEM = registerItem("ditto_item",
-            new ShieldItem(new Item.Settings().maxCount(1)));
+            new PortalGunItem(new Item.Settings().maxCount(1)));
+
+    public static final Item TELEPORTATION_RING = registerItem("teleportation_ring",
+            new PortalGunItem(new Item.Settings().maxCount(1)));
 
     public static final Item CINNAMON_ROLL = registerItem("cinnamon_roll",
             new Item(new Item.Settings().food(GenesisFood.CINNAMON_ROLL).maxCount(64).rarity(Rarity.UNCOMMON)));
@@ -321,6 +324,9 @@ public class GenesisItems {
 
     public static final Item SATURATION_SOUP_CAN = registerItem("saturation_soup_can",
             new CanItem(new Item.Settings().maxCount(16), OPEN_SATURATION_SOUP));
+
+    public static final Item WAND = registerItem("wand",
+            new WandItem(new Item.Settings().maxCount(1).maxDamage(10)));
 
 
     private static Item registerItem(String name, Item item) {
