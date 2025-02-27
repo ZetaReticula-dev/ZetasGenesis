@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "zetasgenesis:block/calcite_tiles"
+    }
+  }
+}

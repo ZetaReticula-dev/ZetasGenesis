@@ -1,0 +1,18 @@
+{
+  "rocket_69": {
+    "sounds": [
+      {
+        "name": "zetasgenesis:rocket_69",
+        "stream": true
+      }
+    ]
+  },
+  "enderium_equip": {
+    "sounds": [
+      {
+        "name": "zetasgenesis:enderium_equip",
+        "stream": true
+      }
+    ]
+  }
+}

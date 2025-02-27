@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "zetasgenesis:item/diamond_pick_and_axe"
+  }
+}

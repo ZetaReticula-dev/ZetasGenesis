@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "zetasgenesis:enderium"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "zetasgenesis:enderium"
+      }
+    ]
+  }
+}

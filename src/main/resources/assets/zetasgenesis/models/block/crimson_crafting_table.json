@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/crimson_planks",
+    "east": "zetasgenesis:block/crimson_crafting_table_side",
+    "north": "zetasgenesis:block/crimson_crafting_table_front",
+    "particle": "zetasgenesis:block/crimson_crafting_table_front",
+    "south": "zetasgenesis:block/crimson_crafting_table_side",
+    "up": "zetasgenesis:block/crimson_crafting_table_top",
+    "west": "zetasgenesis:block/crimson_crafting_table_front"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/acacia_planks",
+    "east": "zetasgenesis:block/acacia_crafting_table_side",
+    "north": "zetasgenesis:block/acacia_crafting_table_front",
+    "particle": "zetasgenesis:block/acacia_crafting_table_front",
+    "south": "zetasgenesis:block/acacia_crafting_table_side",
+    "up": "zetasgenesis:block/acacia_crafting_table_top",
+    "west": "zetasgenesis:block/acacia_crafting_table_front"
+  }
+}

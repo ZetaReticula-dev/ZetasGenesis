@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "zetasgenesis:nether_star_shard",
+    "zetasgenesis:nether_star_shard",
+    "zetasgenesis:nether_star_shard",
+    "zetasgenesis:nether_star_shard"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:nether_star"
+  }
+}

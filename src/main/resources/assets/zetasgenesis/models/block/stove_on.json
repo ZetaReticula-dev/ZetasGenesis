@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "zetasgenesis:block/stove_bottom",
+    "front": "zetasgenesis:block/stove_front_on",
+    "side": "zetasgenesis:block/stove_side",
+    "top": "zetasgenesis:block/stove_top_on"
+  }
+}

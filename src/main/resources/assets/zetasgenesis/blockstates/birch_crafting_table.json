@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "zetasgenesis:block/birch_crafting_table"
+    }
+  }
+}

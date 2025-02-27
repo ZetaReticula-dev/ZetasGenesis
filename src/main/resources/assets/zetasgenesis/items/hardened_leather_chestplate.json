@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "zetasgenesis:item/hardened_leather_chestplate",
+    "layer1": "zetasgenesis:item/hardened_leather_chestplate_overlay"
+  }
+}
