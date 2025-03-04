@@ -16,13 +16,13 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.zetareticula.zetasgenesis.ZetasGenesis"
+			"usa.zetareticula.zetasgenesis.ZetasGenesis"
 		],
 		"fabric-datagen": [
-			"com.zetareticula.zetasgenesis.ZetasGenesisDataGenerator"
+			"usa.zetareticula.zetasgenesis.ZetasGenesisDataGenerator"
 		],
 		"client": [
-			"com.zetareticula.zetasgenesis.ZetasGenesisClient"
+			"usa.zetareticula.zetasgenesis.ZetasGenesisClient"
 		]
 	},
 	"mixins": [

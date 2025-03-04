@@ -1,0 +1,6 @@
+{
+  "parent": "zetasgenesis:item/handheld_32",
+  "textures": {
+    "layer0": "zetasgenesis:item/iron_halberd"
+  }
+}

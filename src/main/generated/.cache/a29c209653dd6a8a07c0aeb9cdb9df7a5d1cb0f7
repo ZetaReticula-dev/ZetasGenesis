@@ -1,2 +1,4 @@
 // 1.21.4	-999999999-01-01T00:00:00	ZetasGenesis/Tags for minecraft:item
 efa84fb660f66aa2c86d2096e70407d7ae204ad5 data/minecraft/tags/item/enchantable/mining.json
+04fe25bee3af17266eb99a42f66287a473db9c6f data/minecraft/tags/item/trimmable_armor.json
+ea4dcf84cb27f944df29ac5e0a447e742759d120 data/zetasgenesis/tags/item/sweeping_compatible.json

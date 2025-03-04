@@ -1,7 +1,6 @@
 package com.zetareticula.zetasgenesis.block;
 
 import com.zetareticula.zetasgenesis.ZetasGenesis;
-import com.zetareticula.zetasgenesis.block.entity.*;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.entity.BlockEntity;
